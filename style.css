@@ -53,6 +53,25 @@ body {
   transition: all 0.3s ease;
 }
 
+.navbar-brand {
+  float: none;
+  height: 60px;
+  display: table-cell;
+  vertical-align: middle;
+  padding-top: 0;
+  padding-bottom: 0;
+  letter-spacing: 4px;
+  font-weight: 400;
+  font-size: 20px;
+  float: left;
+  padding: 15px 15px;
+  line-height: 20px;
+}
+
+.navbar-brand>img {
+  display: block;
+}
+
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -176,9 +195,19 @@ body {
 }
 
 @keyframes float {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  33% { transform: translate(30px, -30px) rotate(5deg); }
-  66% { transform: translate(-20px, 20px) rotate(-5deg); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  33% {
+    transform: translate(30px, -30px) rotate(5deg);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) rotate(-5deg);
+  }
 }
 
 .hero-content {
@@ -340,8 +369,15 @@ body {
 }
 
 @keyframes floatCard {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 .section-header {
@@ -639,7 +675,7 @@ body {
   margin-top: 16px;
 }
 
-.contact-info > p {
+.contact-info>p {
   color: var(--gray);
   margin-bottom: 40px;
   line-height: 1.7;
@@ -795,11 +831,11 @@ body {
   .hero-visual {
     display: none;
   }
-  
+
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .product-card.large {
     grid-column: span 2;
   }
@@ -809,37 +845,37 @@ body {
   .nav-links {
     display: none;
   }
-  
+
   .mobile-menu-btn {
     display: flex;
   }
-  
+
   .hero {
     padding-top: 100px;
   }
-  
+
   .hero-stats {
     flex-wrap: wrap;
     gap: 32px;
   }
-  
+
   .products-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .product-card.large {
     grid-column: span 1;
   }
-  
+
   .contact-wrapper {
     grid-template-columns: 1fr;
   }
-  
+
   .footer-content {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
+
   .footer-links {
     grid-template-columns: 1fr 1fr;
   }
@@ -849,11 +885,11 @@ body {
   .hero-buttons {
     flex-direction: column;
   }
-  
+
   .btn {
     width: 100%;
   }
-  
+
   .footer-links {
     grid-template-columns: 1fr;
   }

@@ -28,7 +28,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background: var(--white);
   color: var(--dark);
   line-height: 1.6;
@@ -420,7 +420,7 @@ body {
 }
 
 .mission {
-  padding: 120px 24px;
+  padding: 80px 24px;
   background: var(--white);
 }
 
@@ -461,7 +461,7 @@ body {
 }
 
 .products {
-  padding: 120px 24px;
+  padding: 80px 24px;
   background: linear-gradient(180deg, #f8fafc 0%, var(--white) 100%);
 }
 
@@ -551,7 +551,7 @@ body {
 }
 
 .team {
-  padding: 120px 24px;
+  padding: 80px 24px;
   background: var(--gradient-dark);
 }
 
@@ -657,7 +657,7 @@ body {
 }
 
 .contact {
-  padding: 120px 24px;
+  padding: 80px 24px;
   background: var(--white);
 }
 

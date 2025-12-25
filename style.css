@@ -842,10 +842,52 @@ body {
   color: var(--primary-light);
 }
 
+/* Footer Bottom Social Styling */
 .footer-bottom {
-  border-top: 1px solid var(--dark-light);
-  padding-top: 30px;
-  text-align: center;
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-wrapper h4 {
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.footer-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.social-circle {
+    width: 45px;
+    height: 45px;
+    background-color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-900); /* Icon color */
+    text-decoration: none;
+    font-size: 18px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-circle:hover {
+    transform: translateY(-3px);
+    background-color: var(--orange); /* Use your brand orange on hover */
+    color: var(--white);
+}
+
+.footer-legal {
+    font-size: 12px !important;
+    opacity: 0.6;
+    margin-top: 10px;
 }
 
 .footer-bottom p {

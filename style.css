@@ -1,7 +1,7 @@
 :root {
-  --primary: #BFA75E;
+  --primary:  #BFA75E;
   --primary-dark: #A08B4A;
-  --primary-light: #D4BC6A;
+  --primary-light:  #D4BC6A;
   --secondary: #8B7355;
   --accent: #C9A96E;
   --dark: #2C2C2C;
@@ -30,14 +30,14 @@ html {
 
 body {
   font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: var(--white);
+  background:  var(--white);
   color: var(--dark);
   line-height: 1.6;
   overflow-x: hidden;
 }
 
 .container {
-  max-width: 1200px;
+  max-width:  1200px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -65,7 +65,7 @@ body {
   font-weight: 600;
   font-size: 20px;
   float: left;
-  padding: 15px 15px;
+  padding:  15px 15px;
   line-height: 20px;
   text-decoration: none;
   color: var(--primary);
@@ -131,10 +131,10 @@ body {
 
 .nav-cta {
   background: var(--gradient);
-  color: white !important;
+  color: white ! important;
   padding: 10px 24px;
   border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease ! important;
 }
 
 .nav-cta:hover {
@@ -161,7 +161,6 @@ body {
 }
 
 .hero {
-  min-height: 100vh;
   display: flex;
   align-items: center;
   position: relative;
@@ -228,9 +227,9 @@ body {
   padding: 8px 16px;
   border-radius: 50px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight:  600;
   margin-bottom: 24px;
-  box-shadow: var(--shadow);
+  box-shadow:  var(--shadow);
   border: 1px solid rgba(191, 167, 94, 0.2);
 }
 
@@ -270,7 +269,7 @@ body {
   justify-content: center;
   padding: 14px 32px;
   border-radius: 10px;
-  font-size: 16px;
+  font-size:  16px;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -316,7 +315,7 @@ body {
 
 .stat-number {
   font-size: 36px;
-  font-weight: 800;
+  font-weight:  800;
   background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -342,7 +341,7 @@ body {
   position: absolute;
   background: var(--white);
   padding: 20px 28px;
-  border-radius: 16px;
+  border-radius:  16px;
   box-shadow: var(--shadow-xl);
   display: flex;
   align-items: center;
@@ -369,7 +368,7 @@ body {
 }
 
 .card-3 {
-  bottom: 10%;
+  bottom:  10%;
   right: 20%;
   animation-delay: -4s;
 }
@@ -401,15 +400,15 @@ body {
   color: var(--primary);
   padding: 8px 16px;
   border-radius: 50px;
-  font-size: 13px;
-  font-weight: 600;
+  font-size:  13px;
+  font-weight:  600;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 16px;
 }
 
 .section-header h2 {
-  font-size: clamp(32px, 4vw, 48px);
+  font-size:  clamp(32px, 4vw, 48px);
   font-weight: 800;
   margin-bottom: 16px;
 }
@@ -422,7 +421,7 @@ body {
 }
 
 .section-header.light .section-desc {
-  color: var(--gray-light);
+  color:  var(--gray-light);
 }
 
 .mission {
@@ -439,7 +438,7 @@ body {
 .mission-card {
   background: var(--white);
   padding: 40px;
-  border-radius: 20px;
+  border-radius:  20px;
   border: 1px solid var(--light);
   transition: all 0.3s ease;
 }
@@ -470,7 +469,7 @@ body {
 
 .products {
   padding: 80px 24px;
-  background: var(--cream);
+  background:  var(--cream);
 }
 
 .products-grid {
@@ -482,7 +481,7 @@ body {
 .product-card {
   background: var(--white);
   padding: 32px;
-  border-radius: 20px;
+  border-radius:  20px;
   border: 1px solid var(--light);
   transition: all 0.3s ease;
 }
@@ -496,7 +495,7 @@ body {
 .product-card.featured {
   background: var(--gradient);
   color: white;
-  border: none;
+  border:  none;
 }
 
 .product-card.featured .product-badge {
@@ -533,13 +532,13 @@ body {
   color: var(--primary);
   padding: 6px 12px;
   border-radius: 50px;
-  font-size: 12px;
+  font-size:  12px;
   font-weight: 600;
 }
 
 .product-card h3 {
   font-size: 24px;
-  font-weight: 700;
+  font-weight:  700;
   margin-bottom: 12px;
   color: var(--primary);
 }
@@ -549,7 +548,7 @@ body {
 }
 
 .product-card p {
-  color: var(--gray);
+  color:  var(--gray);
   line-height: 1.6;
 }
 
@@ -592,10 +591,10 @@ body {
 .team-card {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(191, 167, 94, 0.2);
+  border:  1px solid rgba(191, 167, 94, 0.2);
   border-radius: 20px;
   padding: 40px;
-  text-align: center;
+  text-align:  center;
   transition: all 0.3s ease;
 }
 
@@ -628,7 +627,7 @@ body {
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 0 auto;
+  margin:  0 auto;
   display: block;
   border: 4px solid rgba(191, 167, 94, 0.3);
 }
@@ -661,7 +660,7 @@ body {
 
 .quote-card {
   background: rgba(191, 167, 94, 0.1);
-  border: 1px solid rgba(191, 167, 94, 0.2);
+  border:  1px solid rgba(191, 167, 94, 0.2);
   border-radius: 16px;
   padding: 32px;
 }
@@ -688,12 +687,12 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  align-items: start;
+  align-items:  start;
 }
 
 .contact-info h2 {
   font-size: 36px;
-  font-weight: 800;
+  font-weight:  800;
   margin-bottom: 16px;
   margin-top: 16px;
   color: var(--dark);
@@ -736,7 +735,7 @@ body {
 
 .contact-item a {
   color: var(--primary);
-  text-decoration: none;
+  text-decoration:  none;
 }
 
 .contact-item span {
@@ -771,7 +770,7 @@ body {
 .form-group input,
 .form-group textarea {
   padding: 14px 18px;
-  border: 2px solid transparent;
+  border:  2px solid transparent;
   border-radius: 12px;
   font-size: 16px;
   font-family: inherit;
@@ -800,7 +799,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 60px;
-  margin-bottom: 60px;
+  margin-bottom:  60px;
 }
 
 .footer-brand .logo {
@@ -823,7 +822,7 @@ body {
 }
 
 .footer-column h4 {
-  color: var(--white);
+  color:  var(--white);
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 20px;
@@ -835,7 +834,7 @@ body {
   text-decoration: none;
   font-size: 15px;
   padding: 6px 0;
-  transition: color 0.3s ease;
+  transition:  color 0.3s ease;
 }
 
 .footer-column a:hover {
@@ -854,7 +853,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 14px;
-    margin-bottom: 25px;
+    margin-bottom:  25px;
 }
 
 .footer-social-icons {
@@ -872,7 +871,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--gray-900); /* Icon color */
+    color: var(--gray-900);
     text-decoration: none;
     font-size: 18px;
     transition: transform 0.3s ease, background-color 0.3s ease;
@@ -880,12 +879,12 @@ body {
 
 .social-circle:hover {
     transform: translateY(-3px);
-    background-color: var(--orange); /* Use your brand orange on hover */
+    background-color: var(--primary);
     color: var(--white);
 }
 
 .footer-legal {
-    font-size: 12px !important;
+    font-size: 12px ! important;
     opacity: 0.6;
     margin-top: 10px;
 }
@@ -893,6 +892,172 @@ body {
 .footer-bottom p {
   color: var(--gray);
   font-size: 14px;
+}
+
+/* Modal Styles - Updated to match brand colors */
+.modal {
+  display: none;
+  position:  fixed;
+  z-index:  10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  margin: auto;
+  padding: 0;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 800px;
+  max-height:  85vh;
+  overflow-y:  auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+  position: relative;
+  border: 1px solid rgba(191, 167, 94, 0.2);
+}
+
+.modal-header {
+  background:  var(--gradient);
+  color: white;
+  padding: 35px 40px;
+  border-radius:  20px 20px 0 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight:  700;
+  color: white;
+}
+
+.modal-body {
+  padding: 35px 40px;
+  line-height: 1.8;
+  color: var(--dark);
+}
+
+.modal-body p {
+  margin-bottom:  15px;
+  color: var(--gray);
+}
+
+.modal-body strong {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.modal-body ul {
+  list-style:  none;
+  padding: 0;
+}
+
+.modal-body ul li {
+  padding: 12px 0;
+  padding-left: 30px;
+  position: relative;
+  border-bottom: 1px solid var(--light);
+  color: var(--gray);
+}
+
+.modal-body ul li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.modal-body ul li:last-child {
+  border-bottom: none;
+}
+
+.close-modal {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  line-height: 1;
+}
+
+.close-modal:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(90deg);
+}
+
+.learn-more-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 28px;
+  background: var(--gradient);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition:  all 0.3s ease;
+  border: none;
+  font-size: 14px;
+  box-shadow: 0 4px 15px rgba(191, 167, 94, 0.3);
+}
+
+.learn-more-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(191, 167, 94, 0.4);
+}
+
+.highlight-box {
+  margin-top: 20px;
+  padding: 20px 25px;
+  background: rgba(191, 167, 94, 0.1);
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+}
+
+.highlight-box strong {
+  color: var(--primary-dark);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -932,7 +1097,7 @@ body {
   }
 
   .product-card.large {
-    grid-column: span 1;
+    grid-column:  span 1;
   }
 
   .contact-wrapper {
@@ -946,6 +1111,23 @@ body {
 
   .footer-links {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .modal-content {
+    width: 95%;
+    max-height: 90vh;
+  }
+
+  .modal-header {
+    padding: 25px 25px;
+  }
+
+  .modal-header h2 {
+    font-size: 22px;
+  }
+
+  .modal-body {
+    padding:  25px;
   }
 }
 

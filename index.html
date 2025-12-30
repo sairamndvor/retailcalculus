@@ -15,7 +15,6 @@
   <nav class="navbar">
     <div class="nav-container">
       <a class="navbar-brand" href="index.html">
-        <!-- IMAGE OR SIMPLE TEXT -->
         <img class="dark-logo" id="dark-logo" src="assets/images/logo-black.png" width="110" alt="">
       </a>
       <div class="nav-links">
@@ -45,11 +44,11 @@
       </div>
       <div class="hero-stats">
         <div class="stat">
-          <span class="stat-number">6+</span>
+          <span class="stat-number">10+</span>
           <span class="stat-label">Products</span>
         </div>
         <div class="stat">
-          <span class="stat-number">8+</span>
+          <span class="stat-number">9+</span>
           <span class="stat-label">Years Experience</span>
         </div>
         <div class="stat">
@@ -85,19 +84,32 @@
           <div class="mission-icon">&#127919;</div>
           <h3>Our Mission</h3>
           <p>To help revitalize traditional furniture and other big-ticket retailers by modernizing the shopping
-            experience for customers and sales associates.</p>
+            experience for customers and sales associates. </p>
         </div>
         <div class="mission-card">
           <div class="mission-icon">&#9881;</div>
           <h3>Our Approach</h3>
-          <p>Cloud-hosted subscription-based software solutions designed to bolt-on to existing systems, reducing
-            implementation effort, risk, and cost.</p>
+          <p>Cloud hosted subscription based software solutions that are designed to bolt-on to a retailer's existing computer system and website reducing overall implementation effort, risk and cost.</p>
+          <button class="learn-more-btn" onclick="openModal('approachModal')">Learn More</button>
         </div>
         <div class="mission-card">
           <div class="mission-icon">&#128161;</div>
-          <h3>Our Value</h3>
-          <p>Providing structure and tools to enable digital transformation, allowing retailers to compete with today's
-            digital giants.</p>
+          <h3>Our Value Proposition</h3>
+          <p>Retail Calculus provides the structure and the tools to enable a retailer's digital transformation to successfully compete with today's digital giants.</p>
+        </div>
+      </div>
+      <div class="mission-cards" style="margin-top: 30px;">
+        <div class="mission-card">
+          <div class="mission-icon">&#127919;</div>
+          <h3>Our Product Orientation</h3>
+          <p>All Retail Calculus solutions will work for any retailer but are calibrated for big ticket retailers especially those using a professional and personalized selling approach.</p>
+          <button class="learn-more-btn" onclick="openModal('orientationModal')">Learn More</button>
+        </div>
+        <div class="mission-card">
+          <div class="mission-icon">&#128295;</div>
+          <h3>Our Technology</h3>
+          <p>All Retail Calculus solutions have been designed and developed from scratch as micro services using open source technologies. </p>
+          <button class="learn-more-btn" onclick="openModal('technologyModal')">Learn More</button>
         </div>
       </div>
     </div>
@@ -118,55 +130,73 @@
             <span class="product-badge">Core Product</span>
           </div>
           <h3>Prime</h3>
-          <p>Product information management system that manages, organizes, enhances and orchestrates all product
-            information including pictures and unstructured data.</p>
+          <p>A Product Information Management system that handles structured and unstructured data, images, documents, and retail information.</p>
+          <button class="learn-more-btn" style="background: white;color: var(--primary);" onclick="openModal('primeModal')">More...</button>
         </div>
+        
         <div class="product-card large">
           <div class="product-header">
-            <span class="product-icon">&#128176;</span>
+            <span class="product-icon">&#128187;</span>
           </div>
-          <h3>Vendis</h3>
-          <p>Sales Associate Selling Suite</p>
-          <ul class="product-features">
-            <li><strong>Product Explorer</strong> - An in-store selling web site that delivers all PRIME product
-              information without the need for curation</li>
-            <li><strong>Special Order Configuration</strong> - Foolproof point and click special order configuration
-              with automated pricing and purchase order ready text</li>
-            <li><strong>Sales Order Advisor</strong> - Guided tool for selling everything from sectionals to patio sets
-              to entire rooms with package pricing</li>
-            <li><strong>Document Viewer</strong> - Organized cloud storage for documents such as vendor catalogs and
-              customer agreements</li>
-            <li><strong>Cloud Cart</strong> - More than a sales cart. Manages workflow from leads, to quotes to sales.
-              Integration with the store, the web site and the customer</li>
-          </ul>
+          <h3>Product Explorer</h3>
+          <p>An in-store website designed for sales associates, providing detailed product information, guided selling tools, and Cloud Cart for big-ticket order entry.</p>
+          <button class="learn-more-btn" onclick="openModal('explorerModal')">More...</button>
         </div>
+
         <div class="product-card">
           <div class="product-header">
-            <span class="product-icon">&#128736;</span>
+            <span class="product-icon">&#9889;</span>
           </div>
-          <h3>Sarcio</h3>
-          <p>Work order platform with third-party portal integration for seamless operations.</p>
+          <h3>Mercury</h3>
+          <p>Tools for the mass maintenance of structured data, Excel imports, media imports, and a vendor portal for collaborative data population.</p>
         </div>
+
         <div class="product-card">
           <div class="product-header">
-            <span class="product-icon">&#128666;</span>
+            <span class="product-icon">&#129504;</span>
           </div>
-          <h3>Partum</h3>
-          <p>In-home delivery scheduling platform for efficient last-mile logistics.</p>
+          <h3>Retail Calculus Intelligence</h3>
+          <p>Auto-populates and enriches Product Information including generating Romantic Copy. </p>
         </div>
+
         <div class="product-card">
           <div class="product-header">
             <span class="product-icon">&#128202;</span>
           </div>
           <h3>Optimus</h3>
-          <p>Omni-channel inventory availability platform with real-time rules-based reservation.</p>
+          <p>Manages omnichannel inventory availability and customer order reservations.  Supports both Hunt Path and Rules Based inventory availability.</p>
         </div>
+
+        <div class="product-card">
+          <div class="product-header">
+            <span class="product-icon">&#128666;</span>
+          </div>
+          <h3>Partum</h3>
+          <p>In-home delivery route and trip management, including delivery fee calculation and booking.</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-header">
+            <span class="product-icon">&#128193;</span>
+          </div>
+          <h3>Document Store</h3>
+          <p>Prime connects product media to Collections, Items and SKUs. The Document Store organizes, manages, searches, and retrieves all other company media.</p>
+        </div>
+
         <div class="product-card">
           <div class="product-header">
             <span class="product-icon">&#128274;</span>
           </div>
-          <h3>Scout</h3>
-          <p>Provisions and protects all Retail Calculus solutions with enterprise security.</p>
+          <h3>Ark, Scout and Fortress</h3>
+          <p>These tools provide a launchpad for applications, user management, security enforcement, and system visibility.</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-header">
+            <span class="product-icon">&#128268;</span>
+          </div>
+          <h3>Outpost</h3>
+          <p>A RESTful API layer and ODBC workers for integrating with modern and legacy systems, and prebuilt integrations for platforms like Shopify, HubSpot and Service Titan.</p>
         </div>
       </div>
     </div>
@@ -182,7 +212,7 @@
       <div class="team-grid">
         <div class="team-card">
           <div class="team-image">
-            <img src="https://retailcalculus.com/assets/images/Ed.jpg" alt="Edward L Rennemann">
+            <img src="https://retailcalculus.com/assets/images/Ed. jpg" alt="Edward L Rennemann">
           </div>
           <div class="team-info">
             <h3>Edward L Rennemann</h3>
@@ -207,7 +237,7 @@
           <span class="quote-author">Mitch Kapor, Founder of Lotus</span>
         </div>
         <div class="quote-card">
-          <p>"Web design is responsive design. Responsive web design is web design, done right."</p>
+          <p>"Web design is responsive design.  Responsive web design is web design, done right."</p>
           <span class="quote-author">Andy Clarke, Web Designer & Author</span>
         </div>
         <div class="quote-card">
@@ -226,7 +256,7 @@
           <span class="section-badge">Get In Touch</span>
           <h2>Let's Transform Your Retail Experience</h2>
           <p>Ready to modernize your retail operations? Contact us to learn how our solutions can help your business
-            thrive.</p>
+            thrive. </p>
           <div class="contact-details">
             <div class="contact-item">
               <span class="contact-icon">&#9993;</span>
@@ -252,6 +282,7 @@
           </div>
         </div>
         <div class="contact-form-wrapper">
+          <div id="formMessage" class="form-message"></div>
           <form class="contact-form" id="contactForm">
             <div class="form-group">
               <label for="name">Your Name</label>
@@ -270,7 +301,7 @@
               <textarea id="message" name="message" placeholder="Tell us about your retail challenges..." rows="4"
                 required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">Send Message</button>
           </form>
         </div>
       </div>
@@ -283,7 +314,6 @@
         <div class="footer-brand">
           <div class="logo">
             <a class="navbar-brand" href="index.html">
-              <!-- IMAGE OR SIMPLE TEXT -->
               <img class="dark-logo" id="dark-logo" src="assets/images/logo-black.png" width="110" alt="">
             </a>
           </div>
@@ -300,9 +330,9 @@
           <div class="footer-column">
             <h4>Products</h4>
             <a href="#products">Prime</a>
-            <a href="#products">Vendis</a>
+            <a href="#products">Product Explorer</a>
             <a href="#products">Optimus</a>
-            <a href="#products">Scout</a>
+            <a href="#products">Mercury</a>
           </div>
           <div class="footer-column">
             <h4>Connect</h4>
@@ -333,7 +363,234 @@
     </div>
   </footer>
 
+  <!-- Modals -->
+  
+  <!-- Our Approach Modal -->
+  <div id="approachModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Our Approach</h2>
+        <span class="close-modal" onclick="closeModal('approachModal')">&times;</span>
+      </div>
+      <div class="modal-body">
+        <p><strong>Flexible Integration:</strong> Our solutions are architected to seamlessly integrate with your current technology stack, whether you're running legacy systems or modern platforms.</p>
+        
+        <p><strong>Subscription-Based Model:</strong> Predictable monthly costs with no large upfront capital expenditures. Scale up or down based on your business needs.</p>
+        
+        <p><strong>Reduced Risk:</strong> By bolting onto existing systems rather than replacing them, you minimize disruption to daily operations and reduce implementation risks.</p>
+        
+        <p><strong>Phased Deployment:</strong> Implement solutions incrementally, starting with the areas that deliver the most immediate value to your business.</p>
+        
+        <p><strong>Cloud-First Architecture:</strong> No servers to maintain, automatic updates, and access from anywhere with enterprise-grade security.</p>
+        
+        <div class="highlight-box">
+          <strong>Need a Complete Solution?</strong> If you want to replace everything, Retail Calculus has a comprehensive solution.  Same proven approach, same flexibility, just more integration points.  We can be your complete retail technology partner.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Our Product Orientation Modal -->
+  <div id="orientationModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Our Product Orientation</h2>
+        <span class="close-modal" onclick="closeModal('orientationModal')">&times;</span>
+      </div>
+      <div class="modal-body">
+        <p><strong>Big-Ticket Retail Expertise:</strong> Our solutions are purpose-built for furniture, appliances, mattresses, outdoor living, and other high-consideration purchases where customers benefit from expert guidance. </p>
+        
+        <p><strong>Professional Selling Tools:</strong> Empower your sales associates with tools that make them product experts and selling consultants, not just order takers.</p>
+        
+        <p><strong>Complex Product Management:</strong> Handle special orders, custom configurations, fabric and finish options, room packages, and protection plans with ease.</p>
+        
+        <p><strong>Delivery & Installation:</strong> Manage the complete customer journey including in-home delivery scheduling, white-glove service, and installation coordination.</p>
+        
+        <p><strong>Universal Application:</strong> While optimized for big-ticket retail, our flexible architecture adapts to any retail vertical that values comprehensive product information and customer service.</p>
+        
+        <div class="highlight-box">
+          <strong>For Manufacturers:</strong> If you are a big-ticket manufacturer and want to share your robust product information with retailers, Retail Calculus has a solution—a manufacturer product repository that can be shared with your retail partners.  Ensure your products are presented consistently and accurately across all retail channels with rich content, specifications, and media. 
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Our Technology Modal -->
+  <div id="technologyModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Our Technology</h2>
+        <span class="close-modal" onclick="closeModal('technologyModal')">&times;</span>
+      </div>
+      <div class="modal-body">
+        <p><strong>Microservices Architecture:</strong> Each component is independently deployable and scalable, ensuring maximum flexibility and reliability.  Services communicate through secure RESTful APIs.</p>
+        
+        <p><strong>Open Source Foundation:</strong> Built on proven open-source technologies, avoiding vendor lock-in and ensuring long-term sustainability and community support.</p>
+        
+        <p><strong>AWS Cloud Infrastructure:</strong> Hosted on Amazon Web Services with enterprise-grade security, 99.9% uptime SLA, automatic backups, and disaster recovery capabilities. </p>
+        
+        <p><strong>Optimized User Experience:</strong> User interfaces are optimized for Google Chrome and Apple iPads, delivering a fast, responsive experience for in-store sales associates and back-office users.</p>
+        
+        <p><strong>API-First Design:</strong> Every function is accessible via secure APIs, enabling seamless integration with your existing systems, third-party applications, and future innovations.</p>
+        
+        <p><strong>Real-Time Data: </strong> All product information, inventory, and customer data is accessed in real-time, ensuring accuracy and consistency across all touchpoints.</p>
+        
+        <p><strong>Security & Compliance:</strong> Enterprise-grade security with role-based access control, data encryption at rest and in transit, and compliance with industry standards.</p>
+        
+        <p><strong>Scalable & Future-Proof:</strong> Architecture designed to scale with your business and adapt to emerging technologies including AI, machine learning, and advanced analytics.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Prime Modal -->
+  <div id="primeModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Prime - Product Information Management</h2>
+        <span class="close-modal" onclick="closeModal('primeModal')">&times;</span>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>Prime manages all Product Information:  Structured Data, Unstructured Data (Romantic Copy, Images and Documents), and Retails. </li>
+          <li>Division → Department → Class → Subclass (Actually, nine hierarchy levels are allowed, only two levels are required)</li>
+          <li>Collection → Item → SKU (Collection is optional)</li>
+          <li>Inventory Sets and Selling Sets with set pricing and child sku price proration. </li>
+          <li>Not Stocked and Not Sellable SKUs to support fees, fixtures, supplies... </li>
+          <li>Lean fixed Structured Data.  Unlimited User Defined Data (UDD) configured at any level in the product hierarchy.  Fifteen UDD data types. </li>
+          <li>Data Cloning throughout the Prime. </li>
+          <li>Rules based distribution of Product Information to legacy and third-party systems.  All Retail Calculus applications access Product Information in real-time using secure APIs.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Explorer Modal -->
+  <div id="explorerModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Product Explorer</h2>
+        <span class="close-modal" onclick="closeModal('explorerModal')">&times;</span>
+      </div>
+      <div class="modal-body">
+        <p><strong>In-Store Web Site</strong> - Has every capability that best-in-class eCommerce sites have but delivers all the SKUs and Product Information that you want Sales Associates to see including detailed and drillable product and purchase order availability.  Detailed product status. </p>
+        
+        <ul>
+          <li>Uses familiar eCommerce site conventions.  Easy to learn and understand.</li>
+          <li>Fine tuned for Sales Associates to allow them to focus on the customer and selling.</li>
+          <li>Rich information which can include videos helps to make the Sales Associate "The Product Expert."</li>
+        </ul>
+
+        <p><strong>Made to Order</strong> - Guided customer special order creation from Stock Plus to full Custom.  Generates purchase order ready SKUs.  Configured in Prime and executed in Product Explorer with APIs available for third-party applications.</p>
+        
+        <p><strong>Sales Order Advisor</strong> - Guided Sale Orders Creation.  Point and click.  Product recommendations and add-ons. Tiered package pricings. Discounts prorated across all products. Configured in Prime and executed in Product Explorer with APIs available for third-party applications.</p>
+        
+        <p><strong>Cloud Cart</strong> - More than a cart. Has all the functionality needed to support Big Ticket Order Entry: </p>
+        <ul>
+          <li>Customer bill-to and ship-to.  Both spouse's/partner's names and contact information.</li>
+          <li>Quotes and leads management.</li>
+          <li>Supports all delivery methods including Take With, Shipped, Drop Shipped and In-Home Delivery.</li>
+          <li>In-Home Delivery booking. </li>
+          <li>Support for multiple financing options.  Automatic calculation of payments.</li>
+          <li>If configured, automatic pricing adjustment for cash payments on select products.</li>
+          <li>Automatic calculation of Sale Tax.  Support for all US States.</li>
+          <li>Special Allowance including Make the Total Equal function.</li>
+          <li>Automatic calculation of minimum deposit based on product type and delivery method.</li>
+          <li>Automatic calculation of customer savings. </li>
+        </ul>
+        
+        <div class="highlight-box">
+          When combined with Sales Order Advisor, orders that used to take a half hour to write up, typically take less than three minutes to complete in Cloud Cart. And no errors.
+        </div>
+        
+        <p>Emailed, visually modern invoice with product pictures. </p>
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
+  <script>
+    // Modal Functions
+    function openModal(modalId) {
+      document.getElementById(modalId).classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).classList.remove('active');
+      document.body.style. overflow = 'auto';
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+      if (event.target. classList.contains('modal')) {
+        event.target.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        const activeModal = document.querySelector('.modal.active');
+        if (activeModal) {
+          activeModal.classList. remove('active');
+          document. body.style.overflow = 'auto';
+        }
+      }
+    });
+
+     document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const submitBtn = document.getElementById('submitBtn');
+      const formMessage = document.getElementById('formMessage');
+      const form = e.target;
+      
+      // Get form data
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        company: document.getElementById('company').value,
+        message: document.getElementById('message').value
+      };
+      
+      // Disable submit button
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      
+      // Create mailto link with form data
+      const subject = encodeURIComponent(`Contact Form Submission from ${formData.name}`);
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\n` +
+        `Email: ${formData.email}\n` +
+        `Company: ${formData.company || 'Not provided'}\n\n` +
+        `Message:\n${formData.message}`
+      );
+      
+      const mailtoLink = `mailto:info@retailcalculus.com?subject=${subject}&body=${body}`;
+      
+      // Open mailto link
+      window.location.href = mailtoLink;
+      
+      // Show success message
+      setTimeout(() => {
+        formMessage. textContent = 'Your email client has been opened. Please send the email to complete your message.';
+        formMessage.className = 'form-message success show';
+        
+        // Reset form
+        form. reset();
+        
+        // Re-enable button
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+        
+        // Hide message after 5 seconds
+        setTimeout(() => {
+          formMessage.classList.remove('show');
+        }, 5000);
+      }, 500);
+    });
+  </script>
 </body>
 
 </html>

@@ -4,25 +4,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Retail Calculus - Modernizing Retail Experience</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta name="description"
+    content="Retail Calculus: Enterprise-grade cloud software for furniture and big-ticket retailers. Modernize PIM, Inventory, and Delivery logistics.">
+  <title>Retail Calculus | Modernizing the Furniture Retail Experience</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
+
   <nav class="navbar">
     <div class="nav-container">
       <a class="navbar-brand" href="index.html">
-        <img class="dark-logo" id="dark-logo" src="assets/images/logo-black.png" width="110" alt="">
+        <div class="brand-logo">
+          <img class="dark-logo" src="assets/images/logo-black.png" width="110" alt="">
+        </div>
       </a>
+
       <div class="nav-links">
         <a href="#mission">Mission</a>
-        <a href="#products">Products</a>
-        <a href="#team">Team</a>
-        <a href="#contact" class="nav-cta">Contact Us</a>
+        <a href="platform.html">Platform</a>
+        <a href="#team">About Us</a>
+        <a href="customer-stories.html">Stories</a>
+        <a href="#contact" class="nav-cta">Schedule Demo</a>
       </div>
+
       <button class="mobile-menu-btn" aria-label="Toggle menu">
         <span></span>
         <span></span>
@@ -31,172 +40,157 @@
     </div>
   </nav>
 
+  <div class="mobile-menu-overlay">
+    <a href="#mission" class="mobile-link">Mission</a>
+    <a href="platform.html" class="mobile-link">Platform</a>
+    <a href="#team" class="mobile-link">About Us</a>
+    <a href="customer-stories.html" class="mobile-link">Stories</a>
+    <a href="#contact" class="mobile-link">Schedule Demo</a>
+  </div>
+
   <section id="hero" class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <div class="hero-badge">Transforming Retail Since 2016</div>
-      <h1>Modernizing the <span class="gradient-text">Shopping Experience</span></h1>
-      <p class="hero-subtitle">Cloud-hosted software solutions designed to revitalize traditional furniture and
-        big-ticket retailers</p>
-      <div class="hero-buttons">
-        <a href="#products" class="btn btn-primary">Explore Solutions</a>
-        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-number">10+</span>
-          <span class="stat-label">Products</span>
-        </div>
-        <div class="stat">
-          <span class="stat-number">9+</span>
-          <span class="stat-label">Years Experience</span>
-        </div>
-        <div class="stat">
-          <span class="stat-number">100%</span>
-          <span class="stat-label">Cloud Based</span>
-        </div>
-      </div>
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80"
+        alt="Modern Office" class="bg-img">
+      <div class="overlay"></div>
     </div>
-    <div class="hero-visual">
-      <div class="floating-card card-1">
-        <div class="card-icon">&#128200;</div>
-        <span>Analytics</span>
+
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge"><i class="fa-solid fa-check"></i> Trusted since 2016</div>
+        <h1>Retail Intelligence That Drives <br><span class="gradient-text">Smarter Decisions</span></h1>
+        <p class="hero-subtitle">Retail Calculus helps multi-location retailers turn fragmented data into clear
+          insights—so teams can optimize inventory, improve sales performance, and act faster.</p>
+
+        <div class="hero-buttons">
+          <a href="platform.html" class="btn btn-primary">Explore Solutions <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#contact" class="btn btn-secondary">Book a Demo</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Cloud Native</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">9yr+</span>
+            <span class="stat-label">Track Record</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">10+</span>
+            <span class="stat-label">Retail Suites</span>
+          </div>
+        </div>
       </div>
-      <div class="floating-card card-2">
-        <div class="card-icon">&#128722;</div>
-        <span>Sales</span>
-      </div>
-      <div class="floating-card card-3">
-        <div class="card-icon">&#128230;</div>
-        <span>Inventory</span>
+
+      <div class="hero-visual">
+        <div class="floating-card card-1">
+          <div class="card-icon icon-blue"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="card-text">
+            <small>Analytics</small>
+            <span>Real-time Data</span>
+          </div>
+        </div>
+        <div class="floating-card card-2">
+          <div class="card-icon icon-gold"><i class="fa-solid fa-couch"></i></div>
+          <div class="card-text">
+            <small>Inventory</small>
+            <span>Omnichannel</span>
+          </div>
+        </div>
+        <div class="floating-card card-3">
+          <div class="card-icon icon-green"><i class="fa-solid fa-truck-fast"></i></div>
+          <div class="card-text">
+            <small>Logistics</small>
+            <span>Route Optimization</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
+  <section class="trusted-by-section">
+    <div class="container">
+      <p class="trusted-header">Trusted by industry leaders</p>
+      <div class="logo-marquee">
+        <div class="logo-track">
+          <a href="customer-stories.html" class="logo-item">Multi-Location Brands</a>
+          <a href="customer-stories.html" class="logo-item">Appliance Stores</a>
+          <a href="customer-stories.html" class="logo-item">Furniture Retailers</a>
+          <!-- <a href="customer-stories.html" class="logo-item">Boozt</a>
+          <a href="customer-stories.html" class="logo-item">Softonic</a>
+          <a href="customer-stories.html" class="logo-item">VISA</a>
+          <a href="customer-stories.html" class="logo-item">MEWS</a>
+          <a href="customer-stories.html" class="logo-item">Twilio</a>
+          <a href="customer-stories.html" class="logo-item">Boozt</a>
+          <a href="customer-stories.html" class="logo-item">Softonic</a> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 
+  <div class="powering-ops-bar">
+    <div class="container">
+      <p class="powering-label">Powering Operations For</p>
+      <div class="powering-items">
+        <span>Furniture Retailers</span>
+        <span>•</span>
+        <span>Appliance Stores</span>
+        <span>•</span>
+        <span>Multi-Location Brands</span>
+      </div>
+    </div>
+  </div> -->
 
   <section id="mission" class="mission">
     <div class="container">
       <div class="section-header">
         <span class="section-badge">Our Mission</span>
         <h2>Empowering Retailers for the Digital Age</h2>
+        <p class="section-desc">We bolt onto your existing legacy systems to reduce risk, or replace them entirely. The
+          choice is yours.</p>
       </div>
-      <div class="mission-cards">
+
+      <div class="mission-grid">
         <div class="mission-card">
-          <div class="mission-icon">&#127919;</div>
-          <h3>Our Mission</h3>
-          <p>To help revitalize traditional furniture and other big-ticket retailers by modernizing the shopping
-            experience for customers and sales associates. </p>
+          <div class="mission-icon"><i class="fa-solid fa-bullseye"></i></div>
+          <h3>The Mission</h3>
+          <p>Revitalize traditional furniture and big-ticket retailers by modernizing the shopping experience for
+            customers and sales associates alike.</p>
         </div>
+
+        <div class="mission-card highlight">
+          <div class="mission-icon"><i class="fa-solid fa-microchip"></i></div>
+          <h3>The Approach</h3>
+          <p>Cloud-hosted, subscription-based microservices. We reduce implementation effort, risk, and cost by
+            integrating with your current stack.</p>
+          <button class="text-btn" onclick="openModal('approachModal')">Learn More <i
+              class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
         <div class="mission-card">
-          <div class="mission-icon">&#9881;</div>
-          <h3>Our Approach</h3>
-          <p>Cloud hosted subscription based software solutions that are designed to bolt-on to a retailer's existing computer system and website reducing overall implementation effort, risk and cost.</p>
-          <button class="learn-more-btn" onclick="openModal('approachModal')">Learn More</button>
+          <div class="mission-icon"><i class="fa-solid fa-gem"></i></div>
+          <h3>Value Prop</h3>
+          <p>Retail Calculus provides the structure and tools to enable digital transformation, allowing you to compete
+            with today's digital giants.</p>
         </div>
+
         <div class="mission-card">
-          <div class="mission-icon">&#128161;</div>
-          <h3>Our Value Proposition</h3>
-          <p>Retail Calculus provides the structure and the tools to enable a retailer's digital transformation to successfully compete with today's digital giants.</p>
+          <div class="mission-icon"><i class="fa-solid fa-sliders"></i></div>
+          <h3>Orientation</h3>
+          <p>Calibrated for professional, personalized selling. Perfect for furniture, appliances, and complex
+            configurable products.</p>
+          <button class="text-btn" onclick="openModal('orientationModal')">Learn More <i
+              class="fa-solid fa-arrow-right"></i></button>
         </div>
-      </div>
-      <div class="mission-cards" style="margin-top: 30px;">
+
         <div class="mission-card">
-          <div class="mission-icon">&#127919;</div>
-          <h3>Our Product Orientation</h3>
-          <p>All Retail Calculus solutions will work for any retailer but are calibrated for big ticket retailers especially those using a professional and personalized selling approach.</p>
-          <button class="learn-more-btn" onclick="openModal('orientationModal')">Learn More</button>
-        </div>
-        <div class="mission-card">
-          <div class="mission-icon">&#128295;</div>
-          <h3>Our Technology</h3>
-          <p>All Retail Calculus solutions have been designed and developed from scratch as micro services using open source technologies. </p>
-          <button class="learn-more-btn" onclick="openModal('technologyModal')">Learn More</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="products" class="products">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-badge">Our Products</span>
-        <h2>Enterprise-Grade Retail Solutions</h2>
-        <p class="section-desc">All solutions designed and developed from scratch as microservices using open-source
-          technologies</p>
-      </div>
-      <div class="products-grid">
-        <div class="product-card featured">
-          <div class="product-header">
-            <span class="product-icon">&#128451;</span>
-            <span class="product-badge">Core Product</span>
-          </div>
-          <h3>Prime</h3>
-          <p>A Product Information Management system that handles structured and unstructured data, images, documents, and retail information.</p>
-          <button class="learn-more-btn" style="background: white;color: var(--primary);" onclick="openModal('primeModal')">More...</button>
-        </div>
-        
-        <div class="product-card large">
-          <div class="product-header">
-            <span class="product-icon">&#128187;</span>
-          </div>
-          <h3>Product Explorer</h3>
-          <p>An in-store website designed for sales associates, providing detailed product information, guided selling tools, and Cloud Cart for big-ticket order entry.</p>
-          <button class="learn-more-btn" onclick="openModal('explorerModal')">More...</button>
-        </div>
-
-        <div class="product-card">
-          <div class="product-header">
-            <span class="product-icon">&#9889;</span>
-          </div>
-          <h3>Mercury</h3>
-          <p>Tools for the mass maintenance of structured data, Excel imports, media imports, and a vendor portal for collaborative data population.</p>
-        </div>
-
-        <div class="product-card">
-          <div class="product-header">
-            <span class="product-icon">&#129504;</span>
-          </div>
-          <h3>Retail Calculus Intelligence</h3>
-          <p>Auto-populates and enriches Product Information including generating Romantic Copy. </p>
-        </div>
-
-        <div class="product-card">
-          <div class="product-header">
-            <span class="product-icon">&#128202;</span>
-          </div>
-          <h3>Optimus</h3>
-          <p>Manages omnichannel inventory availability and customer order reservations.  Supports both Hunt Path and Rules Based inventory availability.</p>
-        </div>
-
-        <div class="product-card">
-          <div class="product-header">
-            <span class="product-icon">&#128666;</span>
-          </div>
-          <h3>Partum</h3>
-          <p>In-home delivery route and trip management, including delivery fee calculation and booking.</p>
-        </div>
-
-        <div class="product-card">
-          <div class="product-header">
-            <span class="product-icon">&#128193;</span>
-          </div>
-          <h3>Document Store</h3>
-          <p>Prime connects product media to Collections, Items and SKUs. The Document Store organizes, manages, searches, and retrieves all other company media.</p>
-        </div>
-
-        <div class="product-card">
-          <div class="product-header">
-            <span class="product-icon">&#128274;</span>
-          </div>
-          <h3>Ark, Scout and Fortress</h3>
-          <p>These tools provide a launchpad for applications, user management, security enforcement, and system visibility.</p>
-        </div>
-
-        <div class="product-card">
-          <div class="product-header">
-            <span class="product-icon">&#128268;</span>
-          </div>
-          <h3>Outpost</h3>
-          <p>A RESTful API layer and ODBC workers for integrating with modern and legacy systems, and prebuilt integrations for platforms like Shopify, HubSpot and Service Titan.</p>
+          <div class="mission-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Technology</h3>
+          <p>Built from scratch using open-source technologies on AWS. Secure, scalable, and designed for the modern
+            web.</p>
+          <button class="text-btn" onclick="openModal('technologyModal')">Learn More <i
+              class="fa-solid fa-arrow-right"></i></button>
         </div>
       </div>
     </div>
@@ -204,11 +198,12 @@
 
   <section id="team" class="team">
     <div class="container">
-      <div class="section-header light">
+      <div class="section-header">
         <span class="section-badge">Leadership</span>
-        <h2>Meet Our Founders</h2>
-        <p class="section-desc">Decades of combined experience in retail technology and digital transformation</p>
+        <h2>Leading the new era of retail</h2>
+        <p class="section-desc">Decades of combined experience in retail technology and digital transformation.</p>
       </div>
+
       <div class="team-grid">
         <div class="team-card">
           <div class="team-image">
@@ -220,6 +215,7 @@
             <p>Former Chief Transformation Officer at Crate and Barrel</p>
           </div>
         </div>
+
         <div class="team-card">
           <div class="team-image">
             <img src="https://retailcalculus.com/assets/images/Jai.jpg" alt="Jaikishen Koranchath">
@@ -229,21 +225,6 @@
             <span class="team-role">Co-Founder</span>
             <p>CEO of ndVOR Solutions, an INC 5000 Company</p>
           </div>
-        </div>
-      </div>
-      <div class="quotes-section">
-        <div class="quote-card">
-          <p>"The critical thing in developing software is not the program, it's the design."</p>
-          <span class="quote-author">Mitch Kapor, Founder of Lotus</span>
-        </div>
-        <div class="quote-card">
-          <p>"Web design is responsive design.  Responsive web design is web design, done right."</p>
-          <span class="quote-author">Andy Clarke, Web Designer & Author</span>
-        </div>
-        <div class="quote-card">
-          <p>"Twenty-five years ago, the notion was you could create a general problem-solver software that could solve
-            problems in many different domains. That just turned out to be totally wrong."</p>
-          <span class="quote-author">Howard Gardner, Professor of Cognition and Education, Harvard University</span>
         </div>
       </div>
     </div>
@@ -256,50 +237,54 @@
           <span class="section-badge">Get In Touch</span>
           <h2>Let's Transform Your Retail Experience</h2>
           <p>Ready to modernize your retail operations? Contact us to learn how our solutions can help your business
-            thrive. </p>
+            thrive.</p>
+
           <div class="contact-details">
             <div class="contact-item">
-              <span class="contact-icon">&#9993;</span>
+              <div class="icon-box"><i class="fa-regular fa-envelope"></i></div>
               <div>
                 <strong>Email</strong>
                 <a href="mailto:info@retailcalculus.com">info@retailcalculus.com</a>
               </div>
             </div>
             <div class="contact-item">
-              <span class="contact-icon">&#128222;</span>
+              <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
               <div>
                 <strong>Phone</strong>
                 <a href="tel:+16094503577">+1 (609) 450-3577</a>
               </div>
             </div>
             <div class="contact-item">
-              <span class="contact-icon">&#128205;</span>
+              <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
               <div>
-                <strong>Location</strong>
+                <strong>Headquarters</strong>
                 <span>168 Franklin Corner Road, Bldg 2 Suite 230<br>Lawrenceville, NJ 08648</span>
               </div>
             </div>
           </div>
         </div>
-        <div class="contact-form-wrapper">
+
+        <div class="contact-form-card">
           <div id="formMessage" class="form-message"></div>
           <form class="contact-form" id="contactForm">
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" name="name" placeholder="John Doe" required>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" placeholder="Furniture Co." required>
+              </div>
             </div>
             <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="john@company.com" required>
+              <label for="email">Work Email</label>
+              <input type="email" id="email" name="email" placeholder="jane@company.com" required>
             </div>
             <div class="form-group">
-              <label for="company">Company</label>
-              <input type="text" id="company" name="company" placeholder="Your Company">
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Tell us about your retail challenges..." rows="4"
-                required></textarea>
+              <label for="message">How can we help?</label>
+              <textarea id="message" name="message" placeholder="Tell us about your inventory or delivery challenges..."
+                rows="4" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-full" id="submitBtn">Send Message</button>
           </form>
@@ -310,62 +295,41 @@
 
   <footer class="footer">
     <div class="container">
-      <div class="footer-content">
+      <div class="footer-top">
         <div class="footer-brand">
-          <div class="logo">
-            <a class="navbar-brand" href="index.html">
-              <img class="dark-logo" id="dark-logo" src="assets/images/logo-black.png" width="110" alt="">
-            </a>
+          <div class="brand-logo footer-logo">
+            <img class="dark-logo" src="assets/images/logo-black.png" width="110" alt="">
           </div>
-          <p>Incorporated in 2016. All products are available now.</p>
+          <p>Incorporated in 2016. Enterprise-grade microservices for the modern furniture retailer.</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
         </div>
-        <div class="footer-links">
-          <div class="footer-column">
-            <h4>Quick Links</h4>
-            <a href="#mission">About</a>
-            <a href="#products">Products</a>
-            <a href="#team">Team</a>
+
+        <div class="footer-nav">
+          <div class="col">
+            <h4>Company</h4>
+            <a href="#mission">Mission</a>
+            <a href="#team">Leadership</a>
             <a href="#contact">Contact</a>
           </div>
-          <div class="footer-column">
+          <div class="col">
             <h4>Products</h4>
-            <a href="#products">Prime</a>
-            <a href="#products">Product Explorer</a>
-            <a href="#products">Optimus</a>
-            <a href="#products">Mercury</a>
-          </div>
-          <div class="footer-column">
-            <h4>Connect</h4>
-            <a href="mailto:info@retailcalculus.com">Email Us</a>
-            <a href="tel:+16094503577">Call Us</a>
-            <a href="https://www.google.com/maps/dir//168+Franklin+Corner+Rd,+Lawrenceville,+NJ+08648"
-              target="_blank">Find Us</a>
+            <a href="#">Prime</a>
+            <a href="#">Product Explorer</a>
+            <a href="#">Optimus Inventory</a>
+            <a href="#">Partum Logistics</a>
           </div>
         </div>
       </div>
+
       <div class="footer-bottom">
-                <div class="footer-social-wrapper">
-                    <h4>Follow Us</h4>
-                    <div class="footer-social-icons">
-                        <a href="#" class="social-circle" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-circle" aria-label="Twitter">
-                            <i class="fab fa-x-twitter"></i>
-                        </a>
-                        <a href="#" class="social-circle" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
-                </div>
-                <p>&copy; 2025 Retail Calculus LLC. All rights reserved.</p>
-            </div>
+        <p>&copy; 2026 Retail Calculus LLC. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
-  <!-- Modals -->
-  
-  <!-- Our Approach Modal -->
   <div id="approachModal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
@@ -373,143 +337,178 @@
         <span class="close-modal" onclick="closeModal('approachModal')">&times;</span>
       </div>
       <div class="modal-body">
-        <p><strong>Flexible Integration:</strong> Our solutions are architected to seamlessly integrate with your current technology stack, whether you're running legacy systems or modern platforms.</p>
-        
-        <p><strong>Subscription-Based Model:</strong> Predictable monthly costs with no large upfront capital expenditures. Scale up or down based on your business needs.</p>
-        
-        <p><strong>Reduced Risk:</strong> By bolting onto existing systems rather than replacing them, you minimize disruption to daily operations and reduce implementation risks.</p>
-        
-        <p><strong>Phased Deployment:</strong> Implement solutions incrementally, starting with the areas that deliver the most immediate value to your business.</p>
-        
-        <p><strong>Cloud-First Architecture:</strong> No servers to maintain, automatic updates, and access from anywhere with enterprise-grade security.</p>
-        
+        <p><strong>Flexible Integration:</strong> Our solutions are architected to seamlessly integrate with your
+          current technology stack.</p>
+        <p><strong>Subscription-Based Model:</strong> Predictable monthly costs with no large upfront capital
+          expenditures.</p>
+        <p><strong>Reduced Risk:</strong> By bolting onto existing systems rather than replacing them, you minimize
+          disruption.</p>
         <div class="highlight-box">
-          <strong>Need a Complete Solution?</strong> If you want to replace everything, Retail Calculus has a comprehensive solution.  Same proven approach, same flexibility, just more integration points.  We can be your complete retail technology partner.
+          <strong>Need a Complete Solution?</strong> We can be your complete retail technology partner if you wish to
+          replace everything.
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Our Product Orientation Modal -->
   <div id="orientationModal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
-        <h2>Our Product Orientation</h2>
-        <span class="close-modal" onclick="closeModal('orientationModal')">&times;</span>
+        <h2>Product Orientation</h2><span class="close-modal" onclick="closeModal('orientationModal')">&times;</span>
       </div>
       <div class="modal-body">
-        <p><strong>Big-Ticket Retail Expertise:</strong> Our solutions are purpose-built for furniture, appliances, mattresses, outdoor living, and other high-consideration purchases where customers benefit from expert guidance. </p>
-        
-        <p><strong>Professional Selling Tools:</strong> Empower your sales associates with tools that make them product experts and selling consultants, not just order takers.</p>
-        
-        <p><strong>Complex Product Management:</strong> Handle special orders, custom configurations, fabric and finish options, room packages, and protection plans with ease.</p>
-        
-        <p><strong>Delivery & Installation:</strong> Manage the complete customer journey including in-home delivery scheduling, white-glove service, and installation coordination.</p>
-        
-        <p><strong>Universal Application:</strong> While optimized for big-ticket retail, our flexible architecture adapts to any retail vertical that values comprehensive product information and customer service.</p>
-        
+        <p><strong>Big-Ticket Retail Expertise:</strong> Our solutions are purpose-built for furniture, appliances,
+          mattresses, outdoor living, and other high-consideration purchases where customers benefit from expert
+          guidance. </p>
+
+        <p><strong>Professional Selling Tools:</strong> Empower your sales associates with tools that make them product
+          experts and selling consultants, not just order takers.</p>
+
+        <p><strong>Complex Product Management:</strong> Handle special orders, custom configurations, fabric and finish
+          options, room packages, and protection plans with ease.</p>
+
+        <p><strong>Delivery & Installation:</strong> Manage the complete customer journey including in-home delivery
+          scheduling, white-glove service, and installation coordination.</p>
+
+        <p><strong>Universal Application:</strong> While optimized for big-ticket retail, our flexible architecture
+          adapts to any retail vertical that values comprehensive product information and customer service.</p>
+
         <div class="highlight-box">
-          <strong>For Manufacturers:</strong> If you are a big-ticket manufacturer and want to share your robust product information with retailers, Retail Calculus has a solution—a manufacturer product repository that can be shared with your retail partners.  Ensure your products are presented consistently and accurately across all retail channels with rich content, specifications, and media. 
+          <strong>For Manufacturers:</strong> If you are a big-ticket manufacturer and want to share your robust product
+          information with retailers, Retail Calculus has a solution—a manufacturer product repository that can be
+          shared with your retail partners. Ensure your products are presented consistently and accurately across all
+          retail channels with rich content, specifications, and media.
         </div>
       </div>
     </div>
   </div>
-
-  <!-- Our Technology Modal -->
   <div id="technologyModal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
-        <h2>Our Technology</h2>
-        <span class="close-modal" onclick="closeModal('technologyModal')">&times;</span>
+        <h2>Technology</h2><span class="close-modal" onclick="closeModal('technologyModal')">&times;</span>
       </div>
       <div class="modal-body">
-        <p><strong>Microservices Architecture:</strong> Each component is independently deployable and scalable, ensuring maximum flexibility and reliability.  Services communicate through secure RESTful APIs.</p>
-        
-        <p><strong>Open Source Foundation:</strong> Built on proven open-source technologies, avoiding vendor lock-in and ensuring long-term sustainability and community support.</p>
-        
-        <p><strong>AWS Cloud Infrastructure:</strong> Hosted on Amazon Web Services with enterprise-grade security, 99.9% uptime SLA, automatic backups, and disaster recovery capabilities. </p>
-        
-        <p><strong>Optimized User Experience:</strong> User interfaces are optimized for Google Chrome and Apple iPads, delivering a fast, responsive experience for in-store sales associates and back-office users.</p>
-        
-        <p><strong>API-First Design:</strong> Every function is accessible via secure APIs, enabling seamless integration with your existing systems, third-party applications, and future innovations.</p>
-        
-        <p><strong>Real-Time Data: </strong> All product information, inventory, and customer data is accessed in real-time, ensuring accuracy and consistency across all touchpoints.</p>
-        
-        <p><strong>Security & Compliance:</strong> Enterprise-grade security with role-based access control, data encryption at rest and in transit, and compliance with industry standards.</p>
-        
-        <p><strong>Scalable & Future-Proof:</strong> Architecture designed to scale with your business and adapt to emerging technologies including AI, machine learning, and advanced analytics.</p>
+        <p><strong>Microservices Architecture:</strong> Each component is independently deployable and scalable,
+          ensuring maximum flexibility and reliability. Services communicate through secure RESTful APIs.</p>
+
+        <p><strong>Open Source Foundation:</strong> Built on proven open-source technologies, avoiding vendor lock-in
+          and ensuring long-term sustainability and community support.</p>
+
+        <p><strong>AWS Cloud Infrastructure:</strong> Hosted on Amazon Web Services with enterprise-grade security,
+          99.9% uptime SLA, automatic backups, and disaster recovery capabilities. </p>
+
+        <p><strong>Optimized User Experience:</strong> User interfaces are optimized for Google Chrome and Apple iPads,
+          delivering a fast, responsive experience for in-store sales associates and back-office users.</p>
+
+        <p><strong>API-First Design:</strong> Every function is accessible via secure APIs, enabling seamless
+          integration with your existing systems, third-party applications, and future innovations.</p>
+
+        <p><strong>Real-Time Data: </strong> All product information, inventory, and customer data is accessed in
+          real-time, ensuring accuracy and consistency across all touchpoints.</p>
+
+        <p><strong>Security & Compliance:</strong> Enterprise-grade security with role-based access control, data
+          encryption at rest and in transit, and compliance with industry standards.</p>
+
+        <p><strong>Scalable & Future-Proof:</strong> Architecture designed to scale with your business and adapt to
+          emerging technologies including AI, machine learning, and advanced analytics.</p>
       </div>
     </div>
   </div>
-
-  <!-- Prime Modal -->
   <div id="primeModal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
-        <h2>Prime - Product Information Management</h2>
-        <span class="close-modal" onclick="closeModal('primeModal')">&times;</span>
+        <h2>Prime</h2><span class="close-modal" onclick="closeModal('primeModal')">&times;</span>
       </div>
       <div class="modal-body">
         <ul>
-          <li>Prime manages all Product Information:  Structured Data, Unstructured Data (Romantic Copy, Images and Documents), and Retails. </li>
-          <li>Division → Department → Class → Subclass (Actually, nine hierarchy levels are allowed, only two levels are required)</li>
+          <li>Prime manages all Product Information: Structured Data, Unstructured Data (Romantic Copy, Images and
+            Documents), and Retails. </li>
+          <li>Division → Department → Class → Subclass (Actually, nine hierarchy levels are allowed, only two levels are
+            required)</li>
           <li>Collection → Item → SKU (Collection is optional)</li>
           <li>Inventory Sets and Selling Sets with set pricing and child sku price proration. </li>
           <li>Not Stocked and Not Sellable SKUs to support fees, fixtures, supplies... </li>
-          <li>Lean fixed Structured Data.  Unlimited User Defined Data (UDD) configured at any level in the product hierarchy.  Fifteen UDD data types. </li>
+          <li>Lean fixed Structured Data. Unlimited User Defined Data (UDD) configured at any level in the product
+            hierarchy. Fifteen UDD data types. </li>
           <li>Data Cloning throughout the Prime. </li>
-          <li>Rules based distribution of Product Information to legacy and third-party systems.  All Retail Calculus applications access Product Information in real-time using secure APIs.</li>
+          <li>Rules based distribution of Product Information to legacy and third-party systems. All Retail Calculus
+            applications access Product Information in real-time using secure APIs.</li>
         </ul>
       </div>
     </div>
   </div>
-
-  <!-- Product Explorer Modal -->
   <div id="explorerModal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
-        <h2>Product Explorer</h2>
-        <span class="close-modal" onclick="closeModal('explorerModal')">&times;</span>
+        <h2>Product Explorer</h2><span class="close-modal" onclick="closeModal('explorerModal')">&times;</span>
       </div>
       <div class="modal-body">
-        <p><strong>In-Store Web Site</strong> - Has every capability that best-in-class eCommerce sites have but delivers all the SKUs and Product Information that you want Sales Associates to see including detailed and drillable product and purchase order availability.  Detailed product status. </p>
-        
+        <p><strong>In-Store Web Site</strong> - Has every capability that best-in-class eCommerce sites have but
+          delivers all the SKUs and Product Information that you want Sales Associates to see including detailed and
+          drillable product and purchase order availability. Detailed product status. </p>
+
         <ul>
-          <li>Uses familiar eCommerce site conventions.  Easy to learn and understand.</li>
+          <li>Uses familiar eCommerce site conventions. Easy to learn and understand.</li>
           <li>Fine tuned for Sales Associates to allow them to focus on the customer and selling.</li>
           <li>Rich information which can include videos helps to make the Sales Associate "The Product Expert."</li>
         </ul>
 
-        <p><strong>Made to Order</strong> - Guided customer special order creation from Stock Plus to full Custom.  Generates purchase order ready SKUs.  Configured in Prime and executed in Product Explorer with APIs available for third-party applications.</p>
-        
-        <p><strong>Sales Order Advisor</strong> - Guided Sale Orders Creation.  Point and click.  Product recommendations and add-ons. Tiered package pricings. Discounts prorated across all products. Configured in Prime and executed in Product Explorer with APIs available for third-party applications.</p>
-        
-        <p><strong>Cloud Cart</strong> - More than a cart. Has all the functionality needed to support Big Ticket Order Entry: </p>
+        <p><strong>Made to Order</strong> - Guided customer special order creation from Stock Plus to full Custom.
+          Generates purchase order ready SKUs. Configured in Prime and executed in Product Explorer with APIs available
+          for third-party applications.</p>
+
+        <p><strong>Sales Order Advisor</strong> - Guided Sale Orders Creation. Point and click. Product recommendations
+          and add-ons. Tiered package pricings. Discounts prorated across all products. Configured in Prime and executed
+          in Product Explorer with APIs available for third-party applications.</p>
+
+        <p><strong>Cloud Cart</strong> - More than a cart. Has all the functionality needed to support Big Ticket Order
+          Entry: </p>
         <ul>
-          <li>Customer bill-to and ship-to.  Both spouse's/partner's names and contact information.</li>
+          <li>Customer bill-to and ship-to. Both spouse's/partner's names and contact information.</li>
           <li>Quotes and leads management.</li>
           <li>Supports all delivery methods including Take With, Shipped, Drop Shipped and In-Home Delivery.</li>
           <li>In-Home Delivery booking. </li>
-          <li>Support for multiple financing options.  Automatic calculation of payments.</li>
+          <li>Support for multiple financing options. Automatic calculation of payments.</li>
           <li>If configured, automatic pricing adjustment for cash payments on select products.</li>
-          <li>Automatic calculation of Sale Tax.  Support for all US States.</li>
+          <li>Automatic calculation of Sale Tax. Support for all US States.</li>
           <li>Special Allowance including Make the Total Equal function.</li>
           <li>Automatic calculation of minimum deposit based on product type and delivery method.</li>
           <li>Automatic calculation of customer savings. </li>
         </ul>
-        
+
         <div class="highlight-box">
-          When combined with Sales Order Advisor, orders that used to take a half hour to write up, typically take less than three minutes to complete in Cloud Cart. And no errors.
+          When combined with Sales Order Advisor, orders that used to take a half hour to write up, typically take less
+          than three minutes to complete in Cloud Cart. And no errors.
         </div>
-        
+
         <p>Emailed, visually modern invoice with product pictures. </p>
       </div>
     </div>
   </div>
 
-  <script src="script.js"></script>
   <script>
-    // Modal Functions
+    // --- UI INTERACTION SCRIPTS ---
+
+    // Mobile Menu Toggle
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileOverlay = document.querySelector('.mobile-menu-overlay');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    menuBtn.addEventListener('click', () => {
+      menuBtn.classList.toggle('active');
+      mobileOverlay.classList.toggle('active');
+      document.body.classList.toggle('no-scroll');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuBtn.classList.remove('active');
+        mobileOverlay.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+      });
+    });
+
+    // Modal Logic
     function openModal(modalId) {
       document.getElementById(modalId).classList.add('active');
       document.body.style.overflow = 'hidden';
@@ -517,78 +516,48 @@
 
     function closeModal(modalId) {
       document.getElementById(modalId).classList.remove('active');
-      document.body.style. overflow = 'auto';
+      document.body.style.overflow = 'auto';
     }
 
-    // Close modal when clicking outside
-    window.onclick = function(event) {
-      if (event.target. classList.contains('modal')) {
+    window.onclick = function (event) {
+      if (event.target.classList.contains('modal')) {
         event.target.classList.remove('active');
         document.body.style.overflow = 'auto';
       }
     }
 
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape') {
-        const activeModal = document.querySelector('.modal.active');
-        if (activeModal) {
-          activeModal.classList. remove('active');
-          document. body.style.overflow = 'auto';
-        }
-      }
-    });
-
-     document.getElementById('contactForm').addEventListener('submit', function(e) {
+    // Form Logic
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
       e.preventDefault();
-      
-      const submitBtn = document.getElementById('submitBtn');
-      const formMessage = document.getElementById('formMessage');
-      const form = e.target;
-      
-      // Get form data
+      const btn = document.getElementById('submitBtn');
+      const msg = document.getElementById('formMessage');
+
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+      btn.disabled = true;
+
+      // Simulate form submission for UI feedback
       const formData = {
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
         company: document.getElementById('company').value,
         message: document.getElementById('message').value
       };
-      
-      // Disable submit button
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending...';
-      
-      // Create mailto link with form data
-      const subject = encodeURIComponent(`Contact Form Submission from ${formData.name}`);
-      const body = encodeURIComponent(
-        `Name: ${formData.name}\n` +
-        `Email: ${formData.email}\n` +
-        `Company: ${formData.company || 'Not provided'}\n\n` +
-        `Message:\n${formData.message}`
-      );
-      
-      const mailtoLink = `mailto:info@retailcalculus.com?subject=${subject}&body=${body}`;
-      
-      // Open mailto link
-      window.location.href = mailtoLink;
-      
-      // Show success message
+
+      const subject = encodeURIComponent(`Inquiry from ${formData.name} - ${formData.company}`);
+      const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\n\nMessage:\n${formData.message}`);
+
       setTimeout(() => {
-        formMessage. textContent = 'Your email client has been opened. Please send the email to complete your message.';
-        formMessage.className = 'form-message success show';
-        
-        // Reset form
-        form. reset();
-        
-        // Re-enable button
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Message';
-        
-        // Hide message after 5 seconds
+        window.location.href = `mailto:info@retailcalculus.com?subject=${subject}&body=${body}`;
+        msg.textContent = 'Opening your email client...';
+        msg.className = 'form-message success show';
+        btn.innerHTML = 'Message Sent';
         setTimeout(() => {
-          formMessage.classList.remove('show');
-        }, 5000);
-      }, 500);
+          btn.innerHTML = 'Send Message';
+          btn.disabled = false;
+          msg.classList.remove('show');
+          e.target.reset();
+        }, 3000);
+      }, 800);
     });
   </script>
 </body>

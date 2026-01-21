@@ -1,154 +1,105 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+  // --- NAVIGATION & UI ---
   const navbar = document.querySelector('.navbar');
   const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-  const navLinks = document.querySelector('.nav-links');
-  
-  window.addEventListener('scroll', function() {
+  const mobileOverlay = document.querySelector('.mobile-menu-overlay');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+
+  // Navbar Scroll Effect
+  window.addEventListener('scroll', function () {
     if (window.scrollY > 50) {
-      navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-      navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+      navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.08)';
     } else {
-      navbar.style.background = 'rgba(255, 255, 255, 0.9)';
       navbar.style.boxShadow = 'none';
     }
   });
 
-  mobileMenuBtn.addEventListener('click', function() {
-    navLinks.classList.toggle('active');
-    this.classList.toggle('active');
-  });
-
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-
-  const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-in');
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll('.mission-card, .product-card, .team-card, .quote-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
-  });
-
-  const style = document.createElement('style');
-  style.textContent = `
-    .animate-in {
-      opacity: 1 !important;
-      transform: translateY(0) !important;
-    }
-    
-    .nav-links.active {
-      display: flex !important;
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: white;
-      padding: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      gap: 16px;
-    }
-    
-    .nav-links.active .nav-cta {
-      text-align: center;
-    }
-    
-    .mobile-menu-btn.active span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-    
-    .mobile-menu-btn.active span:nth-child(2) {
-      opacity: 0;
-    }
-    
-    .mobile-menu-btn.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -5px);
-    }
-  `;
-  document.head.appendChild(style);
-
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        const navHeight = navbar.offsetHeight;
-        const targetPosition = target.offsetTop - navHeight;
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
-        
-        navLinks.classList.remove('active');
-        mobileMenuBtn.classList.remove('active');
-      }
-    });
-  });
-
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const formData = new FormData(this);
-      const data = Object.fromEntries(formData);
-      
-      const button = this.querySelector('button[type="submit"]');
-      const originalText = button.textContent;
-      button.textContent = 'Sending...';
-      button.disabled = true;
-      
-      setTimeout(() => {
-        button.textContent = 'Message Sent!';
-        button.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
-        
-        setTimeout(() => {
-          button.textContent = originalText;
-          button.style.background = '';
-          button.disabled = false;
-          contactForm.reset();
-        }, 2000);
-      }, 1000);
+  // Mobile Menu Toggle
+  if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenuBtn.classList.toggle('active');
+      mobileOverlay.classList.toggle('active');
+      document.body.classList.toggle('no-scroll');
     });
   }
 
-  const statNumbers = document.querySelectorAll('.stat-number');
-  const animateStats = (entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const target = entry.target;
-        const text = target.textContent;
-        const num = parseInt(text);
-        
-        if (!isNaN(num) && !target.classList.contains('animated')) {
-          target.classList.add('animated');
-          let current = 0;
-          const increment = num / 30;
-          const suffix = text.replace(/[0-9]/g, '');
-          
-          const timer = setInterval(() => {
-            current += increment;
-            if (current >= num) {
-              target.textContent = num + suffix;
-              clearInterval(timer);
-            } else {
-              target.textContent = Math.floor(current) + suffix;
-            }
-          }, 50);
+  if (mobileLinks) {
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuBtn.classList.remove('active');
+        mobileOverlay.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+      });
+    });
+  }
+
+  // Smooth Scrolling for Hash Links (e.g., "Schedule Demo" jumping to footer)
+  document.querySelectorAll('.smooth-scroll').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      // Only prevent default if it's a pure hash link on the current page
+      if (this.getAttribute('href').startsWith('#')) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          const navHeight = navbar.offsetHeight;
+          const targetPosition = targetElement.offsetTop - navHeight;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
         }
       }
     });
-  };
+  });
 
-  const statsObserver = new IntersectionObserver(animateStats, { threshold: 0.5 });
-  statNumbers.forEach(stat => statsObserver.observe(stat));
+
+  // --- TESTIMONIAL CAROUSEL AUTO-PLAY ---
+  const slides = document.querySelectorAll('.testimonial-slide');
+  // Only run if slides exist on the page
+  if (slides.length > 0) {
+    let currentSlide = 0;
+    const slideInterval = 5000; // Switch every 5 seconds
+
+    function nextSlide() {
+      // Remove active class from current
+      slides[currentSlide].classList.remove('active');
+      // Calculate next slide index
+      currentSlide = (currentSlide + 1) % slides.length;
+      // Add active class to next
+      slides[currentSlide].classList.add('active');
+
+      // Optional: If you have multiple videos, you would switch the video source here too.
+      // For this demo, we keep one looping video side-by-side.
+    }
+
+    // Start the auto-switcher
+    setInterval(nextSlide, slideInterval);
+  }
+
+
+  // --- EXISTING MODAL & FORM LOGIC (Kept for compatibility if needed) ---
+  // Modal Logic
+  window.openModal = function (modalId) { // Made global for inline onclick
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  window.closeModal = function (modalId) { // Made global
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+  }
+
+  window.onclick = function (event) {
+    if (event.target.classList.contains('modal')) {
+      event.target.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+  }
 });

@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform | Retail Calculus</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        /* --- 1. GLOBAL FIX: PREVENT HORIZONTAL SCROLL --- */
+        html,
+        body {
+            overflow-x: hidden !important;
+            width: 100% !important;
+            position: relative;
+        }
+
+        /* Platform Specific Overrides */
+        :root {
+            --bg-offset: #f8fafc;
+            --card-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Hero */
+        .platform-hero {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            padding-top: 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* --- RESPONSIVE MEDIA QUERIES --- */
+        @media screen and (max-width: 1024px) {
+
+            /* Hide Desktop Nav */
+            .nav-links,
+            .nav-cta {
+                display: none !important;
+            }
+
+            /* Fix Nav Container to fit screen exactly */
+            .navbar {
+                width: 100vw !important;
+                /* Force Viewport Width */
+                padding: 0 !important;
+            }
+
+            .nav-container {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 0 20px !important;
+                /* Safe padding from edges */
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+
+            /* Show Hamburger Button */
+            .mobile-menu-btn {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 6px;
+                width: 40px;
+                height: 40px;
+                border: none;
+                background: transparent;
+                cursor: pointer;
+                z-index: 1002;
+                margin-right: 0;
+                /* Align perfectly to the right */
+            }
+
+            /* Hamburger Lines */
+            .mobile-menu-btn span {
+                display: block;
+                width: 26px;
+                height: 3px;
+                background-color: #1A1A1A !important;
+                border-radius: 2px;
+                transition: all 0.3s ease-in-out;
+            }
+
+            /* Active State (X Shape) */
+            .mobile-menu-btn.active span:nth-child(1) {
+                transform: translateY(9px) rotate(45deg);
+            }
+
+            .mobile-menu-btn.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .mobile-menu-btn.active span:nth-child(3) {
+                transform: translateY(-9px) rotate(-45deg);
+            }
+
+            /* Mobile Grid Layouts */
+            .deployment-grid-row,
+            .deployment-grid-tri,
+            .feature-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .feature-grid.reverse .feature-content {
+                order: 1;
+            }
+
+            .feature-grid.reverse .feature-visual {
+                order: 2;
+            }
+
+            .layer-content {
+                flex-direction: column;
+            }
+
+            .usa-map-container {
+                aspect-ratio: auto;
+                height: 300px;
+            }
+        }
+
+        /* --- Standard Desktop Styles --- */
+        .deployment-grid-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .deployment-grid-tri {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+        }
+
+        .deploy-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 40px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .deploy-card:hover {
+            box-shadow: var(--card-shadow);
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .card-icons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .tech-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: #f1f5f9;
+            font-size: 1.5rem;
+            color: var(--dark);
+        }
+
+        .deploy-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .deploy-card p {
+            color: var(--gray);
+            margin-bottom: 25px;
+            font-size: 1rem;
+            flex-grow: 1;
+        }
+
+        .learn-link {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+        }
+
+        .learn-link:hover {
+            color: var(--primary);
+            gap: 12px;
+        }
+
+        .feature-section {
+            padding: 80px 0;
+        }
+
+        .bg-offset {
+            background-color: var(--bg-offset);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .feature-grid.reverse .feature-content {
+            order: 2;
+        }
+
+        .feature-grid.reverse .feature-visual {
+            order: 1;
+        }
+
+        .feature-label {
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            display: block;
+            font-size: 0.9rem;
+        }
+
+        .feature-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .feature-content ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .feature-content li {
+            position: relative;
+            padding-left: 30px;
+            color: var(--gray);
+        }
+
+        .feature-content li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            background: #000;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .arch-block {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .arch-diagram {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            max-width: 1000px;
+            margin: 0 auto;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .diagram-layer {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            position: relative;
+        }
+
+        .layer-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gray);
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .layer-content {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .arch-box {
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 15px 25px;
+            font-weight: 600;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 180px;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .arch-box.core {
+            background: var(--dark);
+            color: white;
+            border-color: var(--dark);
+        }
+
+        .arch-box.cloud {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: rgba(197, 160, 89, 0.05);
+        }
+
+        .arrow-down {
+            display: flex;
+            justify-content: center;
+            color: #cbd5e1;
+            font-size: 1.2rem;
+        }
+
+        .usa-map-container {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            aspect-ratio: 959/593;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+        }
+
+        .usa-map-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class="navbar-brand" href="index.html">
+                <div class="brand-logo">
+                    <img class="dark-logo" src="assets/images/logo-black.png" width="110" alt="Retail Calculus Logo">
+                </div>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html#mission">Mission</a>
+                <a href="platform.html" style="color:var(--primary);">Platform</a>
+                <a href="index.html#team">About Us</a>
+                <a href="customer-stories.html">Stories</a>
+                <a href="#contact" class="nav-cta">Schedule Demo</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu-overlay">
+        <a href="index.html#mission" class="mobile-link">Mission</a>
+        <a href="platform.html" class="mobile-link">Platform</a>
+        <a href="index.html#team" class="mobile-link">About Us</a>
+        <a href="customer-stories.html" class="mobile-link">Stories</a>
+        <a href="#contact" class="mobile-link">Schedule Demo</a>
+    </div>
+
+    <header class="platform-hero">
+        <div class="container">
+            <div class="hero-badge" data-aos="fade-down"><i class="fa-solid fa-layer-group"></i> The Suite</div>
+            <h1 data-aos="fade-up">A Complete <br><span class="gradient-text">Retail Ecosystem</span></h1>
+            <p class="hero-subtitle" style="margin: 0 auto 40px;" data-aos="fade-up" data-aos-delay="100">
+                A modular suite of microservices. Use one, or use them all to modernize your entire stack without the
+                technical debt.
+            </p>
+        </div>
+    </header>
+
+    <section class="feature-section">
+        <div class="container">
+            <div class="feature-grid">
+                <div class="feature-content" data-aos="fade-right">
+                    <span class="feature-label"><i class="fa-solid fa-database"></i> Core System</span>
+                    <h2>Prime PIM</h2>
+                    <p>The single source of truth. Handles structured and unstructured data, images, documents, and
+                        complex hierarchy logic specifically engineered for furniture retail.</p>
+                    <ul>
+                        <li>Manage Division → Department → Class → Subclass hierarchies</li>
+                        <li>Inventory Sets and Selling Sets with pricing logic</li>
+                        <li>Unlimited User Defined Data (UDD)</li>
+                        <li>Real-time API distribution to legacy systems</li>
+                    </ul>
+                </div>
+                <div class="feature-visual" data-aos="fade-left">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/LXb3EKWsInQ?si=Rel=0" title="Prime PIM Demo"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-section bg-offset">
+        <div class="container">
+            <div class="feature-grid reverse">
+                <div class="feature-content" data-aos="fade-left">
+                    <span class="feature-label"><i class="fa-solid fa-desktop"></i> In-Store Experience</span>
+                    <h2>Product Explorer</h2>
+                    <p>An in-store website designed for sales associates. Turn your team into product experts with
+                        guided selling tools that close deals faster.</p>
+                    <ul>
+                        <li>Guided special order creation (Stock Plus to Custom)</li>
+                        <li>Sales Order Advisor with tiered package pricing</li>
+                        <li><strong>Cloud Cart:</strong> Rapid big-ticket order entry</li>
+                        <li>Automatic calculation of taxes, financing, and delivery fees</li>
+                    </ul>
+                </div>
+                <div class="feature-visual" data-aos="fade-right">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/5qap5aO4i9A?si=Rel=0" title="Product Explorer Demo"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-section">
+        <div class="container">
+            <div class="feature-grid">
+                <div class="feature-content" data-aos="fade-right">
+                    <span class="feature-label"><i class="fa-solid fa-boxes-stacked"></i> Inventory</span>
+                    <h2>Optimus</h2>
+                    <p>True omnichannel inventory availability. Stop selling what you don't have and start fulfilling
+                        from the best locations.</p>
+                    <ul>
+                        <li>Supports Hunt Path availability logic</li>
+                        <li>Rules-Based reservations system</li>
+                        <li>Real-time sync across web and store channels</li>
+                    </ul>
+                </div>
+                <div class="feature-visual" data-aos="fade-left">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/tFq6Q_muwG0?si=Rel=0" title="Optimus Demo"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-section bg-offset">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Infrastructure</span>
+                <h2>Flexible Deployment & Security</h2>
+                <p class="section-desc">Enterprise-grade architecture designed for scale, security, and developer
+                    freedom.</p>
+            </div>
+
+            <div class="deployment-grid-row">
+                <div class="deploy-card" data-aos="fade-up">
+                    <div class="card-icons">
+                        <div class="tech-icon"><i class="fa-brands fa-google"></i></div>
+                        <div class="tech-icon"><i class="fa-brands fa-microsoft"></i></div>
+                        <div class="tech-icon"><i class="fa-brands fa-aws"></i></div>
+                    </div>
+                    <h3>Deploy in Retail Cloud</h3>
+                    <p>Retail Calculus Cloud is a SaaS product operated and maintained by us. Customers receive
+                        continuous code updates and it can be deployed in <strong>AWS and multi-region</strong>.
+                    </p>
+                    <a href="#" class="learn-link">Learn about cloud options <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="deploy-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icons">
+                        <div class="tech-icon"><i class="fa-solid fa-server"></i></div>
+                        <div class="tech-icon"><i class="fa-brands fa-docker"></i></div>
+                    </div>
+                    <h3>Deploy Self-hosted</h3>
+                    <p>Self-hosted uses the same codebase as our Cloud and is ideal for retailers needing enhanced
+                        security, governance, or control for data residency.</p>
+                    <a href="#" class="learn-link">Self-hosting options <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="deployment-grid-tri">
+                <div class="deploy-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icons">
+                        <div class="tech-icon"><i class="fa-solid fa-code-branch"></i></div>
+                        <div class="tech-icon"><i class="fa-brands fa-github"></i></div>
+                    </div>
+                    <h3>Integration</h3>
+                    <p><strong>Open APIs and Declarative SDKs</strong> — connect to existing ERPs, POS systems, and
+                        3rd-party logistics seamlessly.</p>
+                    <a href="#" class="learn-link">View API Docs <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="deploy-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-icons">
+                        <div class="tech-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div class="tech-icon"><i class="fa-solid fa-lock"></i></div>
+                    </div>
+                    <h3>Security and Trust</h3>
+                    <p><strong>Trusted Platform</strong> — SOC 2 Type II compliant, inherited permissions, and
+                        role-based access control.</p>
+                    <a href="#" class="learn-link">Security Center <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="deploy-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-icons">
+                        <div class="tech-icon"><i class="fa-solid fa-universal-access"></i></div>
+                    </div>
+                    <h3>Accessibility</h3>
+                    <p><strong>Inclusive Design</strong> — WCAG 2.1 compliant interfaces ensuring your entire workforce
+                        can operate the platform effectively.</p>
+                    <a href="#" class="learn-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-section">
+        <div class="container">
+            <div class="arch-block">
+                <span class="section-badge">Architecture</span>
+                <h2>Complete Retail Ecosystem</h2>
+                <p class="section-desc">How our microservices connect your stores, warehouse, and digital channels.</p>
+
+                <div class="arch-diagram" data-aos="zoom-in">
+
+                    <div class="diagram-layer">
+                        <div class="layer-label">Channels</div>
+                        <div class="layer-content">
+                            <div class="arch-box"><i class="fa-solid fa-tablet-screen-button"></i> In-Store iPad</div>
+                            <div class="arch-box"><i class="fa-solid fa-desktop"></i> Desktop Web</div>
+                            <div class="arch-box"><i class="fa-solid fa-cash-register"></i> POS Terminal</div>
+                        </div>
+                    </div>
+
+                    <div class="arrow-down"><i class="fa-solid fa-arrow-down"></i></div>
+
+                    <div class="diagram-layer">
+                        <div class="layer-label">Retail Calculus Microservices</div>
+                        <div class="layer-content">
+                            <div class="arch-box core"><i class="fa-solid fa-tags"></i> Prime PIM</div>
+                            <div class="arch-box core"><i class="fa-solid fa-magnifying-glass"></i> Product Explorer
+                            </div>
+                            <div class="arch-box core"><i class="fa-solid fa-boxes-stacked"></i> Optimus</div>
+                            <div class="arch-box core"><i class="fa-solid fa-cart-shopping"></i> Cloud Cart</div>
+                        </div>
+                    </div>
+
+                    <div class="arrow-down"><i class="fa-solid fa-arrow-down-up"></i></div>
+
+                    <div class="diagram-layer">
+                        <div class="layer-label">Data & Infrastructure</div>
+                        <div class="layer-content">
+                            <div class="arch-box cloud"><i class="fa-brands fa-aws"></i> AWS Cloud</div>
+                            <div class="arch-box cloud"><i class="fa-solid fa-database"></i> Legacy ERP Sync</div>
+                            <div class="arch-box cloud"><i class="fa-solid fa-truck"></i> 3PL Logistics</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-section bg-offset">
+        <div class="container">
+            <div class="arch-block">
+                <span class="section-badge">Scale</span>
+                <h2>Powering Retail Across the USA</h2>
+                <p class="section-desc">From single showrooms to multi-state distribution networks.</p>
+
+                <div class="usa-map-container" data-aos="fade-up">
+                    <video src="assets/video/Map_Animation_Video_Generated.mp4" autoplay loop muted playsinline></video>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="brand-logo footer-logo">
+                        <img class="dark-logo" src="assets/images/logo-black.png" width="110" alt="Retail Calculus">
+                    </div>
+                    <p>Incorporated in 2016. Enterprise-grade microservices for the modern furniture retailer.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-nav">
+                    <div class="col">
+                        <h4>Company</h4>
+                        <a href="index.html#mission">Mission</a>
+                        <a href="index.html#team">Leadership</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="col">
+                        <h4>Products</h4>
+                        <a href="#">Prime</a>
+                        <a href="#">Product Explorer</a>
+                        <a href="#">Optimus Inventory</a>
+                        <a href="#">Partum Logistics</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Retail Calculus LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS Animation
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+            easing: 'ease-out-cubic'
+        });
+
+        // Mobile Menu Toggle Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileOverlay = document.querySelector('.mobile-menu-overlay');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        if (menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                menuBtn.classList.toggle('active');
+                mobileOverlay.classList.toggle('active');
+                document.body.classList.toggle('no-scroll');
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuBtn.classList.remove('active');
+                    mobileOverlay.classList.remove('active');
+                    document.body.classList.remove('no-scroll');
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="See how American Sale and other leading retailers use Retail Calculus to modernize operations.">
+    <title>Customer Stories | Retail Calculus</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        /* --- Page Specific Styles --- */
+
+        /* Hero Override */
+        .stories-hero {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            padding-top: 120px;
+            /* padding-bottom: 80px; */
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Story Grid Layout */
+        .stories-section {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        /* Modern Story Card */
+        .story-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .story-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: var(--primary);
+        }
+
+        .story-header {
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        /* Overlay pattern on header */
+        .story-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
+            background-size: 20px 20px;
+            opacity: 0.3;
+        }
+
+        .story-logo {
+            font-weight: 800;
+            color: white;
+            font-size: 2rem;
+            z-index: 2;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+        }
+
+        .story-logo img {
+            max-height: 60px;
+            max-width: 80%;
+            object-fit: contain;
+            /* Forces white logo */
+        }
+
+        .story-body {
+            padding: 32px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .story-body h3 {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+            line-height: 1.5;
+            font-weight: 700;
+        }
+
+        .story-tags {
+            margin-top: auto;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .story-tag {
+            font-size: 0.8rem;
+            padding: 6px 12px;
+            background: #f1f5f9;
+            color: var(--gray);
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* CTA Section */
+        .demo-banner {
+            background: var(--dark);
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .demo-banner h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .demo-banner p {
+            color: #94a3b8;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 768px) {
+            .stories-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class="navbar-brand" href="index.html">
+                <div class="brand-logo">
+                    <img class="dark-logo" src="assets/images/logo-black.png" width="110" alt="Retail Calculus Logo">
+                </div>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html#mission">Mission</a>
+                <a href="platform.html">Platform</a>
+                <a href="index.html#team">About Us</a>
+                <a href="customer-stories.html" style="color:var(--primary);">Stories</a>
+                <a href="#contact" class="nav-cta">Schedule Demo</a>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu-overlay">
+        <a href="index.html#mission" class="mobile-link">Mission</a>
+        <a href="platform.html" class="mobile-link">Platform</a>
+        <a href="index.html#team" class="mobile-link">About Us</a>
+        <a href="customer-stories.html" class="mobile-link active">Stories</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <header class="stories-hero">
+        <div class="container">
+            <div class="hero-badge" data-aos="fade-down"><i class="fa-solid fa-users"></i> Success Stories</div>
+            <h1 data-aos="fade-up">See why retailers like <br><img class="text-center m-b-10 f-500"
+                    src="https://rc-site-assets.s3.us-east-2.amazonaws.com/images/logo/american-sale-logo-holiday.png"
+                    alt="RC Logo" height=40px> <br>trust us
+            </h1>
+            <p class="hero-subtitle" style="margin: 0 auto;" data-aos="fade-up" data-aos-delay="100">
+                From pools and patios to complex furniture configurations, discover how we help retailers modernize
+                their stack with real-time data.
+            </p>
+        </div>
+    </header>
+
+    <section class="stories-section">
+        <div class="container">
+            <div class="stories-grid">
+
+                <div class="story-card" data-aos="fade-up">
+                    <div class="story-header"> <span class="story-logo" style="font-family: serif;"><img
+                                class="text-center m-b-10 f-500"
+                                src="https://rc-site-assets.s3.us-east-2.amazonaws.com/images/logo/american-sale-logo-holiday.png"
+                                alt="RC Logo" height=50px></span>
+                    </div>
+                    <div class="story-body">
+                        <h3>Unified Inventory & Sales: How American Sale Modernized Their Pool & Patio Operations.</h3>
+                        <p style="color:var(--gray); margin-bottom: 20px; font-size: 0.95rem;">
+                            By implementing Retail Calculus Product Explorer and Optimus, American Sale gained real-time
+                            visibility into complex inventory sets across multiple locations, streamlining their
+                            high-ticket sales process.
+                        </p>
+                        <div class="story-tags">
+                            <span class="story-tag">Inventory</span>
+                            <span class="story-tag">POS</span>
+                            <span class="story-tag">Pools & Patio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="story-header" style="background-color: #2D2D2D;">
+                        <span class="story-logo">Luxe Living</span>
+                    </div>
+                    <div class="story-body">
+                        <h3>Eliminating Overselling: A High-End Furniture Retailer's Journey to 100% Inventory Accuracy.
+                        </h3>
+                        <div class="story-tags">
+                            <span class="story-tag">Logistics</span>
+                            <span class="story-tag">Custom Orders</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="story-header" style="background-color: #C5A059;">
+                        <span class="story-logo">Home Chef</span>
+                    </div>
+                    <div class="story-body">
+                        <h3>From 30 Minutes to 3 Minutes: Accelerating Appliance Orders with Cloud Cart.</h3>
+                        <div class="story-tags">
+                            <span class="story-tag">Sales Efficiency</span>
+                            <span class="story-tag">In-Store App</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="story-header" style="background-color: #0F172A;">
+                        <span class="story-logo">Urban Patio</span>
+                    </div>
+                    <div class="story-body">
+                        <h3>Connecting 50+ Showrooms: Real-time Data Sync for Seamless Omnichannel Retail.</h3>
+                        <div class="story-tags">
+                            <span class="story-tag">Multi-Location</span>
+                            <span class="story-tag">API Integration</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center" style="margin-top: 80px;" data-aos="fade-up">
+                <button class="btn btn-secondary">Request Case Study</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="demo-banner">
+        <div class="container" data-aos="zoom-in">
+            <h2>Ready to modernize like American Sale?</h2>
+            <p>See how Retail Calculus can optimize your operations with embedded AI and real-time data.</p>
+            <a href="index.html#contact" class="btn btn-primary btn-lg" style="font-size: 1.1rem; padding: 16px 32px;">
+                Request a Demo
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="brand-logo footer-logo">
+                        <img class="dark-logo" src="assets/images/logo-black.png" width="110" alt="Retail Calculus">
+                    </div>
+                    <p>Incorporated in 2016. Enterprise-grade microservices for the modern furniture retailer.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-nav">
+                    <div class="col">
+                        <h4>Company</h4>
+                        <a href="index.html#mission">Mission</a>
+                        <a href="index.html#team">Leadership</a>
+                        <a href="index.html#contact">Contact</a>
+                    </div>
+                    <div class="col">
+                        <h4>Products</h4>
+                        <a href="#">Prime</a>
+                        <a href="#">Product Explorer</a>
+                        <a href="#">Optimus Inventory</a>
+                        <a href="#">Partum Logistics</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Retail Calculus LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS Animation
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+            easing: 'ease-out-cubic'
+        });
+
+        // Mobile Menu Toggle Logic
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileOverlay = document.querySelector('.mobile-menu-overlay');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        if (menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                menuBtn.classList.toggle('active');
+                mobileOverlay.classList.toggle('active');
+                document.body.classList.toggle('no-scroll');
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuBtn.classList.remove('active');
+                    mobileOverlay.classList.remove('active');
+                    document.body.classList.remove('no-scroll');
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>

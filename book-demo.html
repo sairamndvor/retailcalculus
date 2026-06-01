@@ -793,7 +793,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             // State
             const state = {
-                currentDate: new Date(2026, 5, 1), // Standard Initial Date: June 1, 2026 as per screenshot
+                currentDate: new Date(), // Take system's current date
                 selectedDate: null,
                 selectedTime: null,
                 selectedTimezone: 'America/Chicago',
@@ -821,21 +821,23 @@
             const successAttendeeName = document.getElementById('successAttendeeName');
             const successDateTimeText = document.getElementById('successDateTimeText');
 
-            // Set up ranges: Current Date (June 1, 2026) to 2 working weeks ahead.
-            // 2 working weeks means today + 9 subsequent working days (Monday-Friday only).
-            const bookingStartLimit = new Date(2026, 5, 1); // June 1, 2026 (Monday)
+            // Set up ranges: Current system date to 1 month ahead.
+            const bookingStartLimit = new Date(); 
+            bookingStartLimit.setHours(0, 0, 0, 0); // Reset time for accurate date comparison
             
-            // Generate list of 10 working days starting from June 1, 2026
+            const bookingEndLimit = new Date(bookingStartLimit);
+            bookingEndLimit.setMonth(bookingEndLimit.getMonth() + 1);
+            
+            // Generate list of all working days between today and 1 month from today
             const allowedWorkingDates = [];
             let checkDate = new Date(bookingStartLimit);
-            while (allowedWorkingDates.length < 10) {
+            while (checkDate <= bookingEndLimit) {
                 const dayOfWeek = checkDate.getDay();
                 if (dayOfWeek !== 0 && dayOfWeek !== 6) { // Exclude Sunday & Saturday
                     allowedWorkingDates.push(new Date(checkDate));
                 }
                 checkDate.setDate(checkDate.getDate() + 1);
             }
-            const bookingEndLimit = allowedWorkingDates[allowedWorkingDates.length - 1];
 
             // Render Calendar
             function renderCalendar() {

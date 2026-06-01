@@ -179,11 +179,12 @@
         </div>
         <a href="#team">About Us</a>
         <a href="customer-stories.html">Stories</a>
+        <a href="contact.html">Contact</a>
       </div>
 
       <div class="nav-actions">
         <a href="http://localhost:4200" class="btn-login" target="_blank">Log in</a>
-        <a href="#contact" class="btn-demo">Schedule Demo</a>
+        <a href="book-demo.html" class="btn-demo">Schedule Demo</a>
       </div>
 
       <button class="mobile-menu-btn" aria-label="Toggle menu">
@@ -199,7 +200,8 @@
     <a href="platform.html" class="mobile-link">Platform</a>
     <a href="#team" class="mobile-link">About Us</a>
     <a href="customer-stories.html" class="mobile-link">Stories</a>
-    <a href="#contact" class="mobile-link">Schedule Demo</a>
+    <a href="contact.html" class="mobile-link">Contact</a>
+    <a href="book-demo.html" class="mobile-link">Schedule Demo</a>
   </div>
 
   <section id="hero" class="hero">
@@ -218,7 +220,7 @@
 
         <div class="hero-buttons">
           <a href="platform.html" class="btn btn-primary">Explore Solutions <i class="fa-solid fa-arrow-right"></i></a>
-          <a href="#contact" class="btn btn-secondary">Book a Demo</a>
+          <a href="book-demo.html" class="btn btn-secondary">Book a Demo</a>
         </div>
 
         <div class="hero-stats">
@@ -431,68 +433,7 @@
     </div>
   </section>
 
-  <section id="contact" class="contact">
-    <div class="container">
-      <div class="contact-wrapper">
-        <div class="contact-info">
-          <span class="section-badge">Get In Touch</span>
-          <h2>Let's Transform Your Retail Experience</h2>
-          <p>Ready to modernize your retail operations? Contact us to learn how our solutions can help your business
-            thrive.</p>
 
-          <div class="contact-details">
-            <div class="contact-item">
-              <div class="icon-box"><i class="fa-regular fa-envelope"></i></div>
-              <div>
-                <strong>Email</strong>
-                <a href="mailto:info@retailcalculus.com">info@retailcalculus.com</a>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
-              <div>
-                <strong>Phone</strong>
-                <a href="tel:+16094503577">+1 (609) 450-3577</a>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
-              <div>
-                <strong>Headquarters</strong>
-                <span>168 Franklin Corner Road, Bldg 2 Suite 230<br>Lawrenceville, NJ 08648</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-form-card">
-          <div id="formMessage" class="form-message"></div>
-          <form class="contact-form" id="contactForm">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Jane Doe" required>
-              </div>
-              <div class="form-group">
-                <label for="company">Company</label>
-                <input type="text" id="company" name="company" placeholder="Furniture Co." required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="email">Work Email</label>
-              <input type="email" id="email" name="email" placeholder="jane@company.com" required>
-            </div>
-            <div class="form-group">
-              <label for="message">How can we help?</label>
-              <textarea id="message" name="message" placeholder="Tell us about your inventory or delivery challenges..."
-                rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">Send Message</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <footer class="footer">
     <div class="container">
@@ -513,7 +454,8 @@
             <h3>Company</h3>
             <a href="#mission">Mission</a>
             <a href="#team">Leadership</a>
-            <a href="#contact">Contact</a>
+            <a href="book-demo.html">Schedule Demo</a>
+            <a href="contact.html">Contact Us</a>
           </div>
           <div class="col">
             <h3>Products</h3>
@@ -727,39 +669,7 @@
       }
     }
 
-    // Form Logic
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      const btn = document.getElementById('submitBtn');
-      const msg = document.getElementById('formMessage');
 
-      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
-      btn.disabled = true;
-
-      // Simulate form submission for UI feedback
-      const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        company: document.getElementById('company').value,
-        message: document.getElementById('message').value
-      };
-
-      const subject = encodeURIComponent(`Inquiry from ${formData.name} - ${formData.company}`);
-      const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\n\nMessage:\n${formData.message}`);
-
-      setTimeout(() => {
-        window.location.href = `mailto:info@retailcalculus.com?subject=${subject}&body=${body}`;
-        msg.textContent = 'Opening your email client...';
-        msg.className = 'form-message success show';
-        btn.innerHTML = 'Message Sent';
-        setTimeout(() => {
-          btn.innerHTML = 'Send Message';
-          btn.disabled = false;
-          msg.classList.remove('show');
-          e.target.reset();
-        }, 3000);
-      }, 800);
-    });
   </script>
 
   <!-- Theme Toggle Option -->

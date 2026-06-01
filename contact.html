@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Get in touch with the Retail Calculus team. Have questions about our cloud suites, integrations, or deployment? We are here to help.">
+    <title>Contact Us — Retail Calculus</title>
+    <link rel="canonical" href="https://retailcalculus.com/contact.html">
+
+    <!-- Preconnect Origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet">
+    </noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print"
+        onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </noscript>
+    <link rel="preload" href="style.css" as="style">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        .contact-hero {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+
+        body.dark-theme .contact-hero {
+            background: #0b0f19;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class="navbar-brand" href="index.html" aria-label="Retail Calculus Home">
+                <div class="brand-logo">
+                    <img class="dark-logo" src="assets/images/logo-black.webp" width="110" alt="">
+                </div>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html#mission">Mission</a>
+                <div class="nav-dropdown">
+                    <a href="platform.html" class="dropdown-trigger">Platform <i class="fa-solid fa-chevron-down caret-icon"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="platform.html#primepim"><i class="fa-solid fa-database"></i> Prime PIM</a>
+                        <a href="platform.html#productexplorer"><i class="fa-solid fa-desktop"></i> Product Explorer</a>
+                        <a href="platform.html#optimus"><i class="fa-solid fa-boxes-stacked"></i> Optimus Inventory</a>
+                    </div>
+                </div>
+                <a href="index.html#team">About Us</a>
+                <a href="customer-stories.html">Stories</a>
+                <a href="contact.html" style="color:var(--primary);">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="http://localhost:4200" class="btn-login" target="_blank">Log in</a>
+                <a href="book-demo.html" class="btn-demo">Schedule Demo</a>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu-overlay">
+        <a href="index.html#mission" class="mobile-link">Mission</a>
+        <a href="platform.html" class="mobile-link">Platform</a>
+        <a href="index.html#team" class="mobile-link">About Us</a>
+        <a href="customer-stories.html" class="mobile-link">Stories</a>
+        <a href="contact.html" class="mobile-link active">Contact</a>
+        <a href="book-demo.html" class="mobile-link">Schedule Demo</a>
+    </div>
+
+    <section class="contact-hero">
+        <div class="container">
+            <div class="hero-badge"><i class="fa-regular fa-envelope"></i> Contact Us</div>
+            <h1>Get In Touch With Our Team</h1>
+            <p class="hero-subtitle" style="margin: 0 auto; max-width: 600px;">
+                Ready to transform your retail operations? Fill out the form or reach us directly.
+            </p>
+        </div>
+    </section>
+
+    <section class="contact bg-offset" style="padding-top: 20px; padding-bottom: 100px;">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-badge">Get In Touch</span>
+                    <h2>Let's Transform Your Retail Experience</h2>
+                    <p>Ready to modernize your retail operations? Contact us to learn how our solutions can help your business thrive.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="icon-box"><i class="fa-regular fa-envelope"></i></div>
+                            <div>
+                                <strong>Email</strong>
+                                <a href="mailto:info@retailcalculus.com">info@retailcalculus.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <strong>Phone</strong>
+                                <a href="tel:+16094503577">+1 (609) 450-3577</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <strong>Headquarters</strong>
+                                <span>168 Franklin Corner Road, Bldg 2 Suite 230<br>Lawrenceville, NJ 08648</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-card">
+                    <div id="formMessage" class="form-message"></div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company</label>
+                                <input type="text" id="company" name="company" placeholder="Furniture Co." required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Work Email</label>
+                            <input type="email" id="email" name="email" placeholder="jane@company.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">How can we help?</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your inventory or delivery challenges..." rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="brand-logo footer-logo">
+                        <img class="dark-logo" src="assets/images/logo-black.webp" width="110" alt="Retail Calculus">
+                    </div>
+                    <p>Incorporated in 2016. Enterprise-grade microservices for the modern furniture retailer.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-nav">
+                    <div class="col">
+                        <h3>Company</h3>
+                        <a href="index.html#mission">Mission</a>
+                        <a href="index.html#team">About Us</a>
+                        <a href="book-demo.html">Schedule Demo</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                    <div class="col">
+                        <h3>Products</h3>
+                        <a href="#">Prime</a>
+                        <a href="#">Product Explorer</a>
+                        <a href="#">Optimus Inventory</a>
+                        <a href="#">Partum Logistics</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2016-2026 Retail Calculus LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle Option -->
+    <div class="theme-toggle-container">
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme">
+            <span class="theme-toggle-thumb"></span>
+            <span class="theme-toggle-icon theme-toggle-sun"><i class="fa-solid fa-sun"></i></span>
+            <span class="theme-toggle-icon theme-toggle-moon"><i class="fa-solid fa-moon"></i></span>
+        </button>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileOverlay = document.querySelector('.mobile-menu-overlay');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        if (menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                menuBtn.classList.toggle('active');
+                mobileOverlay.classList.toggle('active');
+                document.body.classList.toggle('no-scroll');
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuBtn.classList.remove('active');
+                    mobileOverlay.classList.remove('active');
+                    document.body.classList.remove('no-scroll');
+                });
+            });
+        }
+
+        // Form Logic
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const msg = document.getElementById('formMessage');
+
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+            btn.disabled = true;
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                company: document.getElementById('company').value,
+                message: document.getElementById('message').value
+            };
+
+            const subject = encodeURIComponent(`Inquiry from ${formData.name} - ${formData.company}`);
+            const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\n\nMessage:\n${formData.message}`);
+
+            setTimeout(() => {
+                window.location.href = `mailto:info@retailcalculus.com?subject=${subject}&body=${body}`;
+                msg.textContent = 'Opening your email client...';
+                msg.className = 'form-message success show';
+                btn.innerHTML = 'Message Sent';
+                setTimeout(() => {
+                    btn.innerHTML = 'Send Message';
+                    btn.disabled = false;
+                    msg.classList.remove('show');
+                    e.target.reset();
+                }, 3000);
+            }, 800);
+        });
+
+        // Theme Toggle Logic
+        (function () {
+            const toggleBtn = document.getElementById('themeToggle');
+            if (!toggleBtn) return;
+
+            function applyTheme(theme) {
+                if (theme === 'dark') {
+                    document.body.classList.add('dark-theme');
+                } else {
+                    document.body.classList.remove('dark-theme');
+                }
+                localStorage.setItem('theme', theme);
+            }
+
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+            applyTheme(initialTheme);
+
+            toggleBtn.addEventListener('click', () => {
+                const isDark = document.body.classList.contains('dark-theme');
+                applyTheme(isDark ? 'light' : 'dark');
+            });
+        })();
+    </script>
+</body>
+
+</html>

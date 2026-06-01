@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Book a 30-minute personalized product demo of the Retail Calculus enterprise retail suite over Google Meet. Select a slot that works best for your schedule.">
+    <title>Schedule a Personalised Demo — Retail Calculus</title>
+    <link rel="canonical" href="https://retailcalculus.com/book-demo.html">
+
+    <!-- Preconnect Origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet">
+    </noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print"
+        onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </noscript>
+    <link rel="preload" href="style.css" as="style">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        /* --- BOOKING PAGE SPECIFIC PREMIUM STYLES --- */
+        .booking-hero {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+
+        .booking-section {
+            padding: 20px 0 100px;
+            background: #f8fafc;
+        }
+
+        .booking-card-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+            display: flex;
+            min-height: 580px;
+            transition: all 0.3s ease;
+        }
+
+        /* Left Sidebar Calendar Area */
+        .booking-left-pane {
+            background: #0f172a;
+            color: white;
+            width: 45%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            position: relative;
+        }
+
+        .booking-left-pane::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(45deg, rgba(197, 160, 89, 0.03) 25%, transparent 25%);
+            background-size: 20px 20px;
+            pointer-events: none;
+        }
+
+        .booking-brand-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .booking-logo-icon {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .booking-pane-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            line-height: 1.3;
+        }
+
+        /* Calendar Styling */
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .calendar-header h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .calendar-nav-btn {
+            background: transparent;
+            border: none;
+            color: #94a3b8;
+            font-size: 0.95rem;
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .calendar-nav-btn:hover:not(:disabled) {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .calendar-nav-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+            text-align: center;
+        }
+
+        .calendar-day-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #64748b;
+            text-transform: uppercase;
+            padding-bottom: 8px;
+        }
+
+        .calendar-cell {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            user-select: none;
+            color: #94a3b8;
+        }
+
+        .calendar-cell.active-day {
+            color: white;
+        }
+
+        .calendar-cell.active-day:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .calendar-cell.selected {
+            background: white !important;
+            color: #0f172a !important;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .calendar-cell.disabled {
+            color: #334155;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        /* Right Slot/Form Area */
+        .booking-right-pane {
+            width: 55%;
+            padding: 40px;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        .booking-details-box {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 24px;
+            margin-bottom: 24px;
+        }
+
+        .booking-detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .booking-detail-icon {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-top: 2px;
+        }
+
+        .booking-detail-item h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #475569;
+            margin-bottom: 4px;
+        }
+
+        .booking-detail-item p {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .booking-timezone-select {
+            margin-bottom: 20px;
+        }
+
+        .booking-timezone-select label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #475569;
+            margin-bottom: 6px;
+        }
+
+        .timezone-dropdown {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            color: #1a1a1a;
+            background: #f8fafc;
+            outline: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .timezone-dropdown:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.1);
+        }
+
+        /* Time Slots Grid */
+        .slots-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+        }
+
+        .slots-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-height: 250px;
+            overflow-y: auto;
+            padding-right: 4px;
+        }
+
+        .slot-btn {
+            background: white;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 14px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #1A1A1A;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+            width: 100%;
+        }
+
+        .slot-btn:hover {
+            border-color: var(--primary);
+            background: rgba(197, 160, 89, 0.03);
+            color: var(--primary);
+        }
+
+        .slot-btn.selected {
+            background: var(--dark);
+            color: white;
+            border-color: var(--dark);
+        }
+
+        /* Form Area */
+        .info-form-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 24px;
+        }
+
+        .selected-slot-badge {
+            background: #f1f5f9;
+            border-radius: 8px;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #475569;
+            margin-bottom: 24px;
+        }
+
+        .selected-slot-badge i {
+            color: var(--primary);
+        }
+
+        .form-row-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-actions-box {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .btn-back {
+            background: white;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #475569;
+        }
+
+        .btn-back:hover {
+            background: #f8fafc;
+            color: #1a1a1a;
+            border-color: #94a3b8;
+        }
+
+        /* Confirmation / Success Screen */
+        .success-box {
+            text-align: center;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        .success-icon-box {
+            width: 72px;
+            height: 72px;
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            margin-bottom: 24px;
+            animation: scaleUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        .success-box h2 {
+            font-size: 1.6rem;
+            color: #0f172a;
+            margin-bottom: 12px;
+        }
+
+        .success-box p {
+            color: #64748b;
+            font-size: 1rem;
+            margin-bottom: 30px;
+            max-width: 420px;
+            line-height: 1.6;
+        }
+
+        .success-summary {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 24px;
+            text-align: left;
+            width: 100%;
+            max-width: 480px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .success-summary-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.95rem;
+            color: #334155;
+        }
+
+        .success-summary-item i {
+            color: var(--primary);
+            margin-top: 3px;
+        }
+
+        @keyframes scaleUp {
+            from { transform: scale(0); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 900px) {
+            .booking-card-container {
+                flex-direction: column;
+            }
+            .booking-left-pane {
+                width: 100%;
+                padding: 30px;
+            }
+            .booking-right-pane {
+                width: 100%;
+                padding: 30px;
+            }
+        }
+
+        /* Styling overrides for dark theme */
+        body.dark-theme .booking-section {
+            background: #0b0f19;
+        }
+
+        body.dark-theme .booking-card-container {
+            background: #1e293b;
+            border-color: #334155;
+        }
+
+        body.dark-theme .booking-right-pane {
+            background: #1e293b;
+            color: white;
+        }
+
+        body.dark-theme .booking-detail-item h4 {
+            color: #e2e8f0;
+        }
+
+        body.dark-theme .booking-detail-item p {
+            color: #94a3b8;
+        }
+
+        body.dark-theme .timezone-dropdown {
+            background: #0f172a;
+            border-color: #334155;
+            color: white;
+        }
+
+        body.dark-theme .slots-title {
+            color: white;
+        }
+
+        body.dark-theme .slot-btn {
+            background: #0f172a;
+            border-color: #334155;
+            color: #e2e8f0;
+        }
+
+        body.dark-theme .slot-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: rgba(197, 160, 89, 0.05);
+        }
+
+        body.dark-theme .slot-btn.selected {
+            background: var(--primary);
+            color: black;
+            border-color: var(--primary);
+        }
+
+        body.dark-theme .info-form-title {
+            color: white;
+        }
+
+        body.dark-theme .selected-slot-badge {
+            background: #0f172a;
+            color: #cbd5e1;
+        }
+
+        body.dark-theme .btn-back {
+            background: #0f172a;
+            border-color: #334155;
+            color: #cbd5e1;
+        }
+
+        body.dark-theme .btn-back:hover {
+            background: #1e293b;
+            color: white;
+        }
+
+        body.dark-theme .success-box h2 {
+            color: white;
+        }
+
+        body.dark-theme .success-box p {
+            color: #94a3b8;
+        }
+
+        body.dark-theme .success-summary {
+            background: #0f172a;
+            border-color: #334155;
+            color: #e2e8f0;
+        }
+
+        body.dark-theme .success-summary-item {
+            color: #cbd5e1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class="navbar-brand" href="index.html" aria-label="Retail Calculus Home">
+                <div class="brand-logo">
+                    <img class="dark-logo" src="assets/images/logo-black.webp" width="110" alt="">
+                </div>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html#mission">Mission</a>
+                <div class="nav-dropdown">
+                    <a href="platform.html" class="dropdown-trigger">Platform <i class="fa-solid fa-chevron-down caret-icon"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="platform.html#primepim"><i class="fa-solid fa-database"></i> Prime PIM</a>
+                        <a href="platform.html#productexplorer"><i class="fa-solid fa-desktop"></i> Product Explorer</a>
+                        <a href="platform.html#optimus"><i class="fa-solid fa-boxes-stacked"></i> Optimus Inventory</a>
+                    </div>
+                </div>
+                <a href="index.html#team">About Us</a>
+                <a href="customer-stories.html">Stories</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="http://localhost:4200" class="btn-login" target="_blank">Log in</a>
+                <a href="book-demo.html" class="btn-demo">Schedule Demo</a>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu-overlay">
+        <a href="index.html#mission" class="mobile-link">Mission</a>
+        <a href="platform.html" class="mobile-link">Platform</a>
+        <a href="index.html#team" class="mobile-link">About Us</a>
+        <a href="customer-stories.html" class="mobile-link">Stories</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+        <a href="book-demo.html" class="mobile-link">Schedule Demo</a>
+    </div>
+
+    <section class="booking-hero">
+        <div class="container">
+            <div class="hero-badge"><i class="fa-solid fa-calendar-check"></i> Personalized Session</div>
+            <h1>Schedule Your Interactive Demo</h1>
+            <p class="hero-subtitle" style="margin: 0 auto; max-width: 600px;">
+                Experience first-hand how our modular suites optimize inventory and multiply checkout speed.
+            </p>
+        </div>
+    </section>
+
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-card-container">
+                <!-- Left Pane: Calendar Selector -->
+                <div class="booking-left-pane">
+                    <div class="booking-brand-box">
+                        <i class="fa-solid fa-cube booking-logo-icon"></i>
+                        <span style="font-weight: 800; font-size: 1.1rem; letter-spacing: 0.5px;">RETAIL CALCULUS</span>
+                    </div>
+
+                    <h2 class="booking-pane-title">When to take the demo?</h2>
+
+                    <!-- Interactive Calendar -->
+                    <div class="calendar-header">
+                        <h3 id="currentMonthYear">June 2026</h3>
+                        <div style="display: flex; gap: 8px;">
+                            <button id="prevMonthBtn" class="calendar-nav-btn" aria-label="Previous month"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button id="nextMonthBtn" class="calendar-nav-btn" aria-label="Next month"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="calendar-grid">
+                        <div class="calendar-day-label">Sun</div>
+                        <div class="calendar-day-label">Mon</div>
+                        <div class="calendar-day-label">Tue</div>
+                        <div class="calendar-day-label">Wed</div>
+                        <div class="calendar-day-label">Thu</div>
+                        <div class="calendar-day-label">Fri</div>
+                        <div class="calendar-day-label">Sat</div>
+                    </div>
+                    <div class="calendar-grid" id="calendarDays">
+                        <!-- Generated Dynamically -->
+                    </div>
+                </div>
+
+                <!-- Right Pane: Slot Details / Info Form / Success Screen -->
+                <div class="booking-right-pane" id="bookingRightPane">
+                    <!-- Screen 1: Slot Selection (Default) -->
+                    <div id="screenSlotSelection">
+                        <div class="booking-details-box">
+                            <div class="booking-detail-item">
+                                <i class="fa-solid fa-video booking-detail-icon"></i>
+                                <div>
+                                    <h4>Meeting Location</h4>
+                                    <p>Google Meet (Meeting link will be sent automatically)</p>
+                                </div>
+                            </div>
+                            <div class="booking-detail-item">
+                                <i class="fa-regular fa-clock booking-detail-icon"></i>
+                                <div>
+                                    <h4>Meeting Duration</h4>
+                                    <p>30 mins session</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="booking-timezone-select">
+                            <label for="timezoneDropdown">Select Time Zone</label>
+                            <select id="timezoneDropdown" class="timezone-dropdown">
+                                <option value="America/New_York">Eastern Time (US & Canada) - UTC-04:00</option>
+                                <option value="America/Chicago" selected>Central Time (US & Canada) - UTC-05:00</option>
+                                <option value="America/Denver">Mountain Time (US & Canada) - UTC-06:00</option>
+                                <option value="America/Los_Angeles">Pacific Time (US & Canada) - UTC-07:00</option>
+                                <option value="Europe/London">London / GMT - UTC+01:00</option>
+                                <option value="Asia/Kolkata">India Standard Time (IST) - UTC+05:30</option>
+                            </select>
+                        </div>
+
+                        <h3 class="slots-title" id="slotsTitleText">What time works best?</h3>
+                        <div class="slots-grid" id="slotsContainer">
+                            <!-- Generated dynamically based on date selection -->
+                            <p style="color: #64748b; font-size: 0.9rem; font-style: italic;">Select a date to view available time slots.</p>
+                        </div>
+                    </div>
+
+                    <!-- Screen 2: User Information Form (Hidden Initially) -->
+                    <div id="screenUserInformation" style="display: none;">
+                        <h3 class="info-form-title">Your information</h3>
+                        
+                        <div class="selected-slot-badge">
+                            <i class="fa-solid fa-calendar-day"></i>
+                            <span id="selectedSlotSummaryText">Wednesday, June 3, 2026 at 10:00 AM</span>
+                        </div>
+
+                        <form id="bookingForm" class="contact-form" style="padding:0; margin:0;">
+                            <div class="form-row-2">
+                                <div class="form-group">
+                                    <label for="firstName">First name *</label>
+                                    <input type="text" id="firstName" placeholder="Jane" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last name *</label>
+                                    <input type="text" id="lastName" placeholder="Doe" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="bookingEmail">Your email address *</label>
+                                <input type="email" id="bookingEmail" placeholder="jane@company.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bookingPhone">Phone number *</label>
+                                <input type="tel" id="bookingPhone" placeholder="+1 (555) 019-2834" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bookingJobTitle">Job Title / Company Name *</label>
+                                <input type="text" id="bookingJobTitle" placeholder="Operations Manager, Retail Co." required>
+                            </div>
+
+                            <div class="form-actions-box">
+                                <button type="button" class="btn-back" id="btnBackToSlots"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                                <button type="submit" class="btn btn-primary" id="btnConfirmBooking">Confirm Booking</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Screen 3: Success Confirmation (Hidden Initially) -->
+                    <div id="screenSuccess" style="display: none;">
+                        <div class="success-box">
+                            <div class="success-icon-box"><i class="fa-solid fa-circle-check"></i></div>
+                            <h2>Demo Scheduled Successfully!</h2>
+                            <p>We've sent a calendar invitation complete with the Google Meet link and dial-in details to your email address.</p>
+                            
+                            <div class="success-summary">
+                                <div class="success-summary-item">
+                                    <i class="fa-solid fa-user"></i>
+                                    <div>
+                                        <strong>Attendee</strong>
+                                        <p id="successAttendeeName">Jane Doe</p>
+                                    </div>
+                                </div>
+                                <div class="success-summary-item">
+                                    <i class="fa-solid fa-calendar-check"></i>
+                                    <div>
+                                        <strong>Date & Time</strong>
+                                        <p id="successDateTimeText">Wednesday, June 3, 2026 at 10:00 AM</p>
+                                    </div>
+                                </div>
+                                <div class="success-summary-item">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <div>
+                                        <strong>Location</strong>
+                                        <p>Google Meet video session</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="brand-logo footer-logo">
+                        <img class="dark-logo" src="assets/images/logo-black.webp" width="110" alt="Retail Calculus">
+                    </div>
+                    <p>Incorporated in 2016. Enterprise-grade microservices for the modern furniture retailer.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-nav">
+                    <div class="col">
+                        <h3>Company</h3>
+                        <a href="index.html#mission">Mission</a>
+                        <a href="index.html#team">Leadership</a>
+                        <a href="book-demo.html">Schedule Demo</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                    <div class="col">
+                        <h3>Products</h3>
+                        <a href="#">Prime</a>
+                        <a href="#">Product Explorer</a>
+                        <a href="#">Optimus Inventory</a>
+                        <a href="#">Partum Logistics</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2016-2026 Retail Calculus LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle Option -->
+    <div class="theme-toggle-container">
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme">
+            <span class="theme-toggle-thumb"></span>
+            <span class="theme-toggle-icon theme-toggle-sun"><i class="fa-solid fa-sun"></i></span>
+            <span class="theme-toggle-icon theme-toggle-moon"><i class="fa-solid fa-moon"></i></span>
+        </button>
+    </div>
+
+    <!-- Booking Scheduler Logic Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // State
+            const state = {
+                currentDate: new Date(2026, 5, 1), // Standard Initial Date: June 1, 2026 as per screenshot
+                selectedDate: null,
+                selectedTime: null,
+                selectedTimezone: 'America/Chicago',
+                timeFormatOptions: { hour: '2-digit', minute: '2-digit', hour12: true }
+            };
+
+            // DOM elements
+            const currentMonthYearEl = document.getElementById('currentMonthYear');
+            const calendarDaysEl = document.getElementById('calendarDays');
+            const prevMonthBtn = document.getElementById('prevMonthBtn');
+            const nextMonthBtn = document.getElementById('nextMonthBtn');
+            const timezoneDropdown = document.getElementById('timezoneDropdown');
+            const slotsContainer = document.getElementById('slotsContainer');
+            const slotsTitleText = document.getElementById('slotsTitleText');
+
+            const screenSlotSelection = document.getElementById('screenSlotSelection');
+            const screenUserInformation = document.getElementById('screenUserInformation');
+            const screenSuccess = document.getElementById('screenSuccess');
+            const bookingRightPane = document.getElementById('bookingRightPane');
+
+            const selectedSlotSummaryText = document.getElementById('selectedSlotSummaryText');
+            const bookingForm = document.getElementById('bookingForm');
+            const btnBackToSlots = document.getElementById('btnBackToSlots');
+
+            const successAttendeeName = document.getElementById('successAttendeeName');
+            const successDateTimeText = document.getElementById('successDateTimeText');
+
+            // Set up ranges: Current Date (June 1, 2026) to 2 working weeks ahead.
+            // 2 working weeks means today + 9 subsequent working days (Monday-Friday only).
+            const bookingStartLimit = new Date(2026, 5, 1); // June 1, 2026 (Monday)
+            
+            // Generate list of 10 working days starting from June 1, 2026
+            const allowedWorkingDates = [];
+            let checkDate = new Date(bookingStartLimit);
+            while (allowedWorkingDates.length < 10) {
+                const dayOfWeek = checkDate.getDay();
+                if (dayOfWeek !== 0 && dayOfWeek !== 6) { // Exclude Sunday & Saturday
+                    allowedWorkingDates.push(new Date(checkDate));
+                }
+                checkDate.setDate(checkDate.getDate() + 1);
+            }
+            const bookingEndLimit = allowedWorkingDates[allowedWorkingDates.length - 1];
+
+            // Render Calendar
+            function renderCalendar() {
+                const year = state.currentDate.getFullYear();
+                const month = state.currentDate.getMonth();
+                
+                // Set Month Title
+                const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                currentMonthYearEl.textContent = `${monthNames[month]} ${year}`;
+
+                // Clear days
+                calendarDaysEl.innerHTML = '';
+
+                const firstDayIndex = new Date(year, month, 1).getDay();
+                const totalDays = new Date(year, month + 1, 0).getDate();
+
+                // Add empty cells for preceding days
+                for (let i = 0; i < firstDayIndex; i++) {
+                    const emptyCell = document.createElement('div');
+                    emptyCell.className = 'calendar-cell disabled';
+                    calendarDaysEl.appendChild(emptyCell);
+                }
+
+                // Add month day cells
+                for (let day = 1; day <= totalDays; day++) {
+                    const cellDate = new Date(year, month, day);
+                    const cell = document.createElement('div');
+                    cell.className = 'calendar-cell';
+                    cell.textContent = day;
+
+                    // Check if date is in the allowed working days
+                    const isWorkingDayAllowed = allowedWorkingDates.some(allowedDate => 
+                        allowedDate.getFullYear() === cellDate.getFullYear() &&
+                        allowedDate.getMonth() === cellDate.getMonth() &&
+                        allowedDate.getDate() === cellDate.getDate()
+                    );
+
+                    if (isWorkingDayAllowed) {
+                        cell.classList.add('active-day');
+                        
+                        // Check if currently selected
+                        if (state.selectedDate && 
+                            state.selectedDate.getFullYear() === cellDate.getFullYear() &&
+                            state.selectedDate.getMonth() === cellDate.getMonth() &&
+                            state.selectedDate.getDate() === cellDate.getDate()) {
+                            cell.classList.add('selected');
+                        }
+
+                        // Add selection click event
+                        cell.addEventListener('click', () => {
+                            document.querySelectorAll('.calendar-cell.selected').forEach(el => el.classList.remove('selected'));
+                            cell.classList.add('selected');
+                            state.selectedDate = cellDate;
+                            renderSlots();
+                        });
+                    } else {
+                        cell.classList.add('disabled');
+                    }
+
+                    calendarDaysEl.appendChild(cell);
+                }
+
+                // Manage Prev/Next Buttons
+                prevMonthBtn.disabled = month === bookingStartLimit.getMonth() && year === bookingStartLimit.getFullYear();
+                nextMonthBtn.disabled = month === bookingEndLimit.getMonth() && year === bookingEndLimit.getFullYear();
+            }
+
+            // Calendar Navigation
+            prevMonthBtn.addEventListener('click', () => {
+                state.currentDate.setMonth(state.currentDate.getMonth() - 1);
+                renderCalendar();
+            });
+
+            nextMonthBtn.addEventListener('click', () => {
+                state.currentDate.setMonth(state.currentDate.getMonth() + 1);
+                renderCalendar();
+            });
+
+            // Timezone Selector Change
+            timezoneDropdown.addEventListener('change', (e) => {
+                state.selectedTimezone = e.target.value;
+                if (state.selectedDate) {
+                    renderSlots();
+                }
+            });
+
+            // Generate Available Time Slots (8:00 AM to 5:00 PM) in 30-min intervals
+            function renderSlots() {
+                slotsContainer.innerHTML = '';
+                
+                const dateOptions = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
+                const formattedDate = state.selectedDate.toLocaleDateString('en-US', dateOptions);
+                slotsTitleText.textContent = `Showing times for ${formattedDate}`;
+
+                // Base times: 8:00 AM to 5:00 PM
+                const slots = [];
+                let startHour = 8;
+                let startMin = 0;
+
+                while (startHour < 17 || (startHour === 17 && startMin === 0)) {
+                    const ampm = startHour >= 12 ? 'pm' : 'am';
+                    const displayHour = startHour > 12 ? startHour - 12 : startHour;
+                    const displayMin = startMin === 0 ? '00' : startMin;
+                    slots.push(`${displayHour}:${displayMin} ${ampm}`);
+
+                    startMin += 30;
+                    if (startMin === 60) {
+                        startMin = 0;
+                        startHour += 1;
+                    }
+                }
+
+                // Render slot buttons
+                slots.forEach(slotTime => {
+                    const btn = document.createElement('button');
+                    btn.className = 'slot-btn';
+                    btn.textContent = slotTime;
+                    
+                    btn.addEventListener('click', () => {
+                        state.selectedTime = slotTime;
+                        
+                        // Switch to Step 2 Form
+                        selectedSlotSummaryText.textContent = `${formattedDate} at ${slotTime} (${timezoneDropdown.options[timezoneDropdown.selectedIndex].text.split(' - ')[0]})`;
+                        
+                        // Animate transitions
+                        screenSlotSelection.style.display = 'none';
+                        screenUserInformation.style.display = 'block';
+                        bookingRightPane.scrollTop = 0;
+                    });
+
+                    slotsContainer.appendChild(btn);
+                });
+            }
+
+            // Back button handling
+            btnBackToSlots.addEventListener('click', () => {
+                screenUserInformation.style.display = 'none';
+                screenSlotSelection.style.display = 'block';
+            });
+
+            // Form Submit and booking success handling
+            bookingForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const formData = {
+                    firstName: document.getElementById('firstName').value,
+                    lastName: document.getElementById('lastName').value,
+                    email: document.getElementById('bookingEmail').value,
+                    phone: document.getElementById('bookingPhone').value,
+                    company: document.getElementById('bookingJobTitle').value
+                };
+
+                // Fill Success Page details
+                successAttendeeName.textContent = `${formData.firstName} ${formData.lastName}`;
+                successDateTimeText.textContent = selectedSlotSummaryText.textContent;
+
+                // Transition to Step 3 Success
+                screenUserInformation.style.display = 'none';
+                screenSuccess.style.display = 'block';
+                bookingRightPane.scrollTop = 0;
+            });
+
+            // Initialize Page
+            renderCalendar();
+
+            // Mobile Menu Toggle
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileOverlay = document.querySelector('.mobile-menu-overlay');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if (menuBtn) {
+                menuBtn.addEventListener('click', () => {
+                    menuBtn.classList.toggle('active');
+                    mobileOverlay.classList.toggle('active');
+                    document.body.classList.toggle('no-scroll');
+                });
+
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        menuBtn.classList.remove('active');
+                        mobileOverlay.classList.remove('active');
+                        document.body.classList.remove('no-scroll');
+                    });
+                });
+            }
+
+            // Theme Toggle Logic
+            (function () {
+                const toggleBtn = document.getElementById('themeToggle');
+                if (!toggleBtn) return;
+
+                function applyTheme(theme) {
+                    if (theme === 'dark') {
+                        document.body.classList.add('dark-theme');
+                    } else {
+                        document.body.classList.remove('dark-theme');
+                    }
+                    localStorage.setItem('theme', theme);
+                }
+
+                const savedTheme = localStorage.getItem('theme');
+                const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+                applyTheme(initialTheme);
+
+                toggleBtn.addEventListener('click', () => {
+                    const isDark = document.body.classList.contains('dark-theme');
+                    applyTheme(isDark ? 'light' : 'dark');
+                });
+            })();
+        });
+    </script>
+</body>
+
+</html>

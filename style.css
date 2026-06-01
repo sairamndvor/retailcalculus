@@ -118,16 +118,22 @@ body {
 .text-btn {
   background: none;
   border: none;
-  color: var(--primary);
+  color: #8A6623; /* Darker gold for WCAG AA contrast on white backgrounds */
   font-weight: 600;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  transition: all 0.2s ease;
 }
 
 .text-btn:hover {
   gap: 10px;
+  color: var(--primary-hover);
+}
+
+.mission-card.highlight .text-btn {
+  color: var(--primary); /* Keep light gold for dark background */
 }
 
 /* --- NAVIGATION --- */
@@ -1086,7 +1092,7 @@ section {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 30px;
   text-align: center;
-  color: #64748B;
+  color: #94A3B8; /* High-contrast light gray for WCAG AA compliance on dark backgrounds */
   font-size: 0.9rem;
 }
 

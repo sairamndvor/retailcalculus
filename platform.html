@@ -13,30 +13,45 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://retailcalculus.com/platform.html">
     <meta property="og:title" content="Retail Calculus Platform — Modular Cloud Solutions for Big-Ticket Retail">
-    <meta property="og:description" content="Explore our modular enterprise retail suite: Prime PIM, Product Explorer with Cloud Cart guided selling, and Optimus inventory reservation system.">
+    <meta property="og:description"
+        content="Explore our modular enterprise retail suite: Prime PIM, Product Explorer with Cloud Cart guided selling, and Optimus inventory reservation system.">
     <meta property="og:image" content="https://retailcalculus.com/assets/images/logo-black.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://retailcalculus.com/platform.html">
     <meta property="twitter:title" content="Retail Calculus Platform — Modular Cloud Solutions for Big-Ticket Retail">
-    <meta property="twitter:description" content="Explore our modular enterprise retail suite: Prime PIM, Product Explorer with Cloud Cart guided selling, and Optimus inventory reservation system.">
+    <meta property="twitter:description"
+        content="Explore our modular enterprise retail suite: Prime PIM, Product Explorer with Cloud Cart guided selling, and Optimus inventory reservation system.">
     <meta property="twitter:image" content="https://retailcalculus.com/assets/images/logo-black.png">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet">
+    </noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </noscript>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preload" href="style.css" as="style">
     <link href="style.css" rel="stylesheet" type="text/css" />
 
     <!-- Google Analytics GA4 (Standard Template) -->
     <!-- REPLACE 'G-XXXXXXXXXX' WITH YOUR MEASUREMENT ID TO ACTIVATE ANALYTICS -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
 
     <!-- Structured Data (JSON-LD Graph for Platform) -->
@@ -453,23 +468,23 @@
 
 <body>
 
-  <div class="top-bar">
-    <div class="top-bar-container">
-      <div class="top-bar-left">
-      </div>
-      <div class="top-bar-right">
-        <a href="#support"><i class="fa-regular fa-comment-dots"></i> Customer Support</a>
-        <a href="#sales"><i class="fa-regular fa-user"></i> Contact Sales</a>
-        <a href="http://localhost:4200/login" class="login-link" target="_blank">Log in</a>
-      </div>
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="top-bar-left">
+            </div>
+            <div class="top-bar-right">
+                <!-- <a href="#support"><i class="fa-regular fa-comment-dots"></i> Customer Support</a> -->
+                <a href="#sales"><i class="fa-regular fa-user"></i> Contact Sales</a>
+                <a href="http://localhost:4200/login" class="login-link" target="_blank">Log in</a>
+            </div>
+        </div>
     </div>
-  </div>
 
     <nav class="navbar">
         <div class="nav-container">
             <a class="navbar-brand" href="index.html">
                 <div class="brand-logo">
-                    <img class="dark-logo" src="assets/images/logo-black.png" width="110" alt="Retail Calculus Logo">
+                    <img class="dark-logo" src="assets/images/logo-black.webp" width="110" alt="Retail Calculus Logo">
                 </div>
             </a>
 
@@ -832,7 +847,7 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <div class="brand-logo footer-logo">
-                        <img class="dark-logo" src="assets/images/logo-black.png" width="110" alt="Retail Calculus">
+                        <img class="dark-logo" src="assets/images/logo-black.webp" width="110" alt="Retail Calculus">
                     </div>
                     <p>Incorporated in 2016. Enterprise-grade microservices for the modern furniture retailer.</p>
                     <div class="social-links">
@@ -906,41 +921,41 @@
         }
     </script>
 
-  <!-- Theme Toggle Option -->
-  <div class="theme-toggle-container">
-    <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme">
-      <span class="theme-toggle-thumb"></span>
-      <span class="theme-toggle-icon theme-toggle-sun"><i class="fa-solid fa-sun"></i></span>
-      <span class="theme-toggle-icon theme-toggle-moon"><i class="fa-solid fa-moon"></i></span>
-    </button>
-  </div>
+    <!-- Theme Toggle Option -->
+    <div class="theme-toggle-container">
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme">
+            <span class="theme-toggle-thumb"></span>
+            <span class="theme-toggle-icon theme-toggle-sun"><i class="fa-solid fa-sun"></i></span>
+            <span class="theme-toggle-icon theme-toggle-moon"><i class="fa-solid fa-moon"></i></span>
+        </button>
+    </div>
 
-  <script>
-    // --- DARK/LIGHT THEME TOGGLE SCRIPT ---
-    (function() {
-      const toggleBtn = document.getElementById('themeToggle');
-      if (!toggleBtn) return;
+    <script>
+        // --- DARK/LIGHT THEME TOGGLE SCRIPT ---
+        (function () {
+            const toggleBtn = document.getElementById('themeToggle');
+            if (!toggleBtn) return;
 
-      function applyTheme(theme) {
-        if (theme === 'dark') {
-          document.body.classList.add('dark-theme');
-        } else {
-          document.body.classList.remove('dark-theme');
-        }
-        localStorage.setItem('theme', theme);
-      }
+            function applyTheme(theme) {
+                if (theme === 'dark') {
+                    document.body.classList.add('dark-theme');
+                } else {
+                    document.body.classList.remove('dark-theme');
+                }
+                localStorage.setItem('theme', theme);
+            }
 
-      const savedTheme = localStorage.getItem('theme');
-      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
-      applyTheme(initialTheme);
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+            applyTheme(initialTheme);
 
-      toggleBtn.addEventListener('click', () => {
-        const isDark = document.body.classList.contains('dark-theme');
-        applyTheme(isDark ? 'light' : 'dark');
-      });
-    })();
-  </script>
+            toggleBtn.addEventListener('click', () => {
+                const isDark = document.body.classList.contains('dark-theme');
+                applyTheme(isDark ? 'light' : 'dark');
+            });
+        })();
+    </script>
 </body>
 
 </html>

@@ -25,9 +25,21 @@
     content="Modernize furniture retail with enterprise-grade cloud PIM, omnichannel inventory reservations, routing logistics & guided selling solutions by Retail Calculus.">
   <meta property="twitter:image" content="https://retailcalculus.com/assets/images/logo-black.png">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet">
+  </noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print"
+    onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  </noscript>
+  <link rel="preload" href="style.css" as="style">
   <link href="style.css" rel="stylesheet" type="text/css" />
 
   <!-- Google Analytics GA4 (Standard Template) -->
@@ -164,7 +176,7 @@
     <div class="nav-container">
       <a class="navbar-brand" href="index.html">
         <div class="brand-logo">
-          <img class="dark-logo" src="assets/images/logo-black.png" width="110" alt="">
+          <img class="dark-logo" src="assets/images/logo-black.webp" width="110" alt="">
         </div>
       </a>
 
@@ -194,8 +206,8 @@
 
   <section id="hero" class="hero">
     <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80"
-        alt="Modern Office" class="bg-img">
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1350"
+        fetchpriority="high" alt="Modern Office" class="bg-img">
       <div class="overlay"></div>
     </div>
 
@@ -260,8 +272,8 @@
         style="justify-content: center; display: flex; align-items: center; gap: 40px; margin-bottom: 20px; flex-wrap: wrap;">
         <a href="customer-stories.html" class="logo-item"
           style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit;">
-          <img src="https://rc-site-assets.s3.us-east-2.amazonaws.com/images/logo/american-sale-logo-holiday.png"
-            alt="American Sale Logo" style="height: 35px; transition: 0.3s;">
+          <img src="assets/images/american-sale-logo.webp" alt="American Sale Logo"
+            style="height: 35px; transition: 0.3s;">
           <span style="font-weight: 700; font-size: 1.1rem; color: var(--gray);"></span>
         </a>
         <div style="width: 1px; height: 20px; background-color: #cbd5e1;"></div>
@@ -356,12 +368,12 @@
       </div>
       <div class="spotlight-card">
         <div class="spotlight-content">
-          <img src="https://rc-site-assets.s3.us-east-2.amazonaws.com/images/logo/american-sale-logo-holiday.png"
-            alt="American Sale" style="height: 48px; margin-bottom: 24px;">
+          <img src="assets/images/american-sale-logo.webp" alt="American Sale"
+            style="height: 48px; margin-bottom: 24px;">
           <h3 class="spotlight-heading">Unified Inventory & Sales: How American Sale Modernized Pool & Patio Operations
           </h3>
           <p class="spotlight-text">
-            By integrating Retail Calculus **Product Explorer** and **Optimus**, high-ticket recreation retailer
+            By integrating Retail Calculus **Product Explorer** and **Prime PIM**, high-ticket recreation retailer
             American Sale unlocked absolute real-time citable inventory visibility across multiple showrooms, directly
             accelerating in-store operations and transaction accuracy.
           </p>
@@ -398,7 +410,7 @@
       <div class="team-grid">
         <div class="team-card">
           <div class="team-image">
-            <img src="https://retailcalculus.com/assets/images/Ed. jpg" alt="Edward L Rennemann">
+            <img src="assets/images/ed.webp" alt="Edward L Rennemann">
           </div>
           <div class="team-info">
             <h3>Edward L Rennemann</h3>
@@ -409,7 +421,7 @@
 
         <div class="team-card">
           <div class="team-image">
-            <img src="https://retailcalculus.com/assets/images/Jai.jpg" alt="Jaikishen Koranchath">
+            <img src="assets/images/jai.webp" alt="Jaikishen Koranchath">
           </div>
           <div class="team-info">
             <h3>Jaikishen Koranchath</h3>
@@ -489,7 +501,7 @@
       <div class="footer-top">
         <div class="footer-brand">
           <div class="brand-logo footer-logo">
-            <img class="dark-logo" src="assets/images/logo-black.png" width="110" alt="">
+            <img class="dark-logo" src="assets/images/logo-black.webp" width="110" alt="">
           </div>
           <p>Incorporated in 2016. Enterprise-grade microservices for the modern furniture retailer.</p>
           <div class="social-links">

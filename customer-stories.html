@@ -5,16 +5,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="See how American Sale and other leading retailers use Retail Calculus to modernize operations.">
-    <title>Customer Stories | Retail Calculus</title>
+        content="Read how American Sale and other high-ticket furniture & appliance retailers modernized their operations and inventory accuracy using Retail Calculus.">
+    <title>Success Stories — How Leading Retailers Trust Retail Calculus</title>
+    <link rel="canonical" href="https://retailcalculus.com/customer-stories.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://retailcalculus.com/customer-stories.html">
+    <meta property="og:title" content="Success Stories — How Leading Retailers Trust Retail Calculus">
+    <meta property="og:description" content="Read how American Sale and other high-ticket furniture & appliance retailers modernized their operations and inventory accuracy using Retail Calculus.">
+    <meta property="og:image" content="https://rc-site-assets.s3.us-east-2.amazonaws.com/images/logo/american-sale-logo-holiday.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://retailcalculus.com/customer-stories.html">
+    <meta property="twitter:title" content="Success Stories — How Leading Retailers Trust Retail Calculus">
+    <meta property="twitter:description" content="Read how American Sale and other high-ticket furniture & appliance retailers modernized their operations and inventory accuracy using Retail Calculus.">
+    <meta property="twitter:image" content="https://rc-site-assets.s3.us-east-2.amazonaws.com/images/logo/american-sale-logo-holiday.png">
 
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
     <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <!-- Google Analytics GA4 (Standard Template) -->
+    <!-- REPLACE 'G-XXXXXXXXXX' WITH YOUR MEASUREMENT ID TO ACTIVATE ANALYTICS -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Structured Data (JSON-LD Case Study Schema) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://retailcalculus.com/customer-stories.html#americansalecase",
+          "headline": "Unified Inventory & Sales: How American Sale Modernized Their Pool & Patio Operations",
+          "description": "Discover how multi-location retailer American Sale leveraged Retail Calculus Product Explorer and Optimus to gain absolute real-time inventory visibility and streamline order configurations.",
+          "image": "https://rc-site-assets.s3.us-east-2.amazonaws.com/images/logo/american-sale-logo-holiday.png",
+          "author": {
+            "@type": "Organization",
+            "name": "Retail Calculus LLC",
+            "url": "https://retailcalculus.com"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Retail Calculus LLC",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://retailcalculus.com/assets/images/logo-black.png"
+            }
+          },
+          "about": [
+            {
+              "@type": "SoftwareApplication",
+              "name": "Product Explorer"
+            },
+            {
+              "@type": "SoftwareApplication",
+              "name": "Optimus Inventory"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 
     <style>
         /* --- Page Specific Styles --- */
@@ -167,6 +229,18 @@
 </head>
 
 <body>
+
+  <div class="top-bar">
+    <div class="top-bar-container">
+      <div class="top-bar-left">
+      </div>
+      <div class="top-bar-right">
+        <a href="#support"><i class="fa-regular fa-comment-dots"></i> Customer Support</a>
+        <a href="#sales"><i class="fa-regular fa-user"></i> Contact Sales</a>
+        <a href="http://localhost:4200/login" class="login-link" target="_blank">Log in</a>
+      </div>
+    </div>
+  </div>
 
     <nav class="navbar">
         <div class="nav-container">
@@ -327,7 +401,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Retail Calculus LLC. All rights reserved.</p>
+                <p>&copy; 2016-2026 Retail Calculus LLC. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -363,6 +437,42 @@
             });
         }
     </script>
+
+  <!-- Theme Toggle Option -->
+  <div class="theme-toggle-container">
+    <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme">
+      <span class="theme-toggle-thumb"></span>
+      <span class="theme-toggle-icon theme-toggle-sun"><i class="fa-solid fa-sun"></i></span>
+      <span class="theme-toggle-icon theme-toggle-moon"><i class="fa-solid fa-moon"></i></span>
+    </button>
+  </div>
+
+  <script>
+    // --- DARK/LIGHT THEME TOGGLE SCRIPT ---
+    (function() {
+      const toggleBtn = document.getElementById('themeToggle');
+      if (!toggleBtn) return;
+
+      function applyTheme(theme) {
+        if (theme === 'dark') {
+          document.body.classList.add('dark-theme');
+        } else {
+          document.body.classList.remove('dark-theme');
+        }
+        localStorage.setItem('theme', theme);
+      }
+
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+      applyTheme(initialTheme);
+
+      toggleBtn.addEventListener('click', () => {
+        const isDark = document.body.classList.contains('dark-theme');
+        applyTheme(isDark ? 'light' : 'dark');
+      });
+    })();
+  </script>
 </body>
 
 </html>

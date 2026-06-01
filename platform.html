@@ -4,13 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Platform | Retail Calculus</title>
+    <meta name="description"
+        content="Explore our modular enterprise retail suite: Prime PIM, Product Explorer with Cloud Cart guided selling, and Optimus inventory reservation system.">
+    <title>Retail Calculus Platform — Modular Cloud Solutions for Big-Ticket Retail</title>
+    <link rel="canonical" href="https://retailcalculus.com/platform.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://retailcalculus.com/platform.html">
+    <meta property="og:title" content="Retail Calculus Platform — Modular Cloud Solutions for Big-Ticket Retail">
+    <meta property="og:description" content="Explore our modular enterprise retail suite: Prime PIM, Product Explorer with Cloud Cart guided selling, and Optimus inventory reservation system.">
+    <meta property="og:image" content="https://retailcalculus.com/assets/images/logo-black.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://retailcalculus.com/platform.html">
+    <meta property="twitter:title" content="Retail Calculus Platform — Modular Cloud Solutions for Big-Ticket Retail">
+    <meta property="twitter:description" content="Explore our modular enterprise retail suite: Prime PIM, Product Explorer with Cloud Cart guided selling, and Optimus inventory reservation system.">
+    <meta property="twitter:image" content="https://retailcalculus.com/assets/images/logo-black.png">
 
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <!-- Google Analytics GA4 (Standard Template) -->
+    <!-- REPLACE 'G-XXXXXXXXXX' WITH YOUR MEASUREMENT ID TO ACTIVATE ANALYTICS -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Structured Data (JSON-LD Graph for Platform) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://retailcalculus.com/platform.html#primepim",
+          "name": "Prime PIM",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All",
+          "offers": {
+            "@type": "Offer",
+            "price": "Contact for Pricing"
+          },
+          "description": "Enterprise-grade Product Information Management for furniture and big-ticket retailers. Handles Division -> Department -> Class -> Subclass hierarchies, inventory and selling sets, and robust User Defined Data (UDD)."
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://retailcalculus.com/platform.html#productexplorer",
+          "name": "Product Explorer",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All",
+          "offers": {
+            "@type": "Offer",
+            "price": "Contact for Pricing"
+          },
+          "description": "Store associate web portal featuring Sales Order Advisor with tiered package pricing, custom special order workflows, and Cloud Cart to enable rapid checkout in under 3 minutes."
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://retailcalculus.com/platform.html#optimus",
+          "name": "Optimus Inventory",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All",
+          "offers": {
+            "@type": "Offer",
+            "price": "Contact for Pricing"
+          },
+          "description": " omnichannel inventory reservation system using citable Hunt Path availability logic to maintain 100% accuracy across multiple physical warehouses and digital stores."
+        }
+      ]
+    }
+    </script>
 
     <style>
         /* --- 1. GLOBAL FIX: PREVENT HORIZONTAL SCROLL --- */
@@ -381,6 +453,18 @@
 
 <body>
 
+  <div class="top-bar">
+    <div class="top-bar-container">
+      <div class="top-bar-left">
+      </div>
+      <div class="top-bar-right">
+        <a href="#support"><i class="fa-regular fa-comment-dots"></i> Customer Support</a>
+        <a href="#sales"><i class="fa-regular fa-user"></i> Contact Sales</a>
+        <a href="http://localhost:4200/login" class="login-link" target="_blank">Log in</a>
+      </div>
+    </div>
+  </div>
+
     <nav class="navbar">
         <div class="nav-container">
             <a class="navbar-brand" href="index.html">
@@ -575,37 +659,151 @@
                 <p class="section-desc">How our microservices connect your stores, warehouse, and digital channels.</p>
 
                 <div class="arch-diagram" data-aos="zoom-in">
-
-                    <div class="diagram-layer">
-                        <div class="layer-label">Channels</div>
-                        <div class="layer-content">
-                            <div class="arch-box"><i class="fa-solid fa-tablet-screen-button"></i> In-Store iPad</div>
-                            <div class="arch-box"><i class="fa-solid fa-desktop"></i> Desktop Web</div>
-                            <div class="arch-box"><i class="fa-solid fa-cash-register"></i> POS Terminal</div>
-                        </div>
+                    <div class="tabs">
+                        <button class="tab-button active" onclick="openTab('EnterpriseArch', this)">
+                            Enterprise Architecture
+                        </button>
+                        <button class="tab-button" onclick="openTab('technical', this)">
+                            Technical Stack
+                        </button>
                     </div>
 
-                    <div class="arrow-down"><i class="fa-solid fa-arrow-down"></i></div>
+                    <div id="EnterpriseArch" class="tab-content active">
+                        <div class="arch-intro">
+                            <h3>Enterprise Retail Architecture – Retail Calculus</h3>
+                            <p>High-scale microservices architecture for large-format retail, supporting in-store
+                                associates, iPads, and desktop terminals.</p>
+                        </div>
 
-                    <div class="diagram-layer">
-                        <div class="layer-label">Retail Calculus Microservices</div>
-                        <div class="layer-content">
-                            <div class="arch-box core"><i class="fa-solid fa-tags"></i> Prime PIM</div>
-                            <div class="arch-box core"><i class="fa-solid fa-magnifying-glass"></i> Product Explorer
+                        <div class="arch-layer border-green">
+                            <span class="layer-title bg-green">Retail Store Boundary</span>
+
+                            <div class="card gateway-wide">
+                                <h4>ARK – Associate Entry Gateway</h4>
+                                <p>Centralized SSO for all in-store users and roles.</p>
                             </div>
-                            <div class="arch-box core"><i class="fa-solid fa-boxes-stacked"></i> Optimus</div>
-                            <div class="arch-box core"><i class="fa-solid fa-cart-shopping"></i> Cloud Cart</div>
+
+                            <div class="module-grid">
+                                <div class="card system-card">
+                                    <h5>In-Store Web Application</h5>
+                                    <p>Angular responsive web app.</p>
+                                    <ul class="feature-list">
+                                        <li>Product Explorer (Selling Suite)</li>
+                                        <li>Cart & Sale Order Advisor (USP)</li>
+                                        <li>POS Submission</li>
+                                        <li>HubSpot Integration</li>
+                                    </ul>
+                                    <div class="rt-example">
+                                        <strong>Real-Time Example:</strong> PE is the selling interface for the
+                                        associates to create carts for Customers and integrates with HubSpot.
+                                    </div>
+                                </div>
+
+                                <div class="card system-card">
+                                    <h5>Prime (PIM System)</h5>
+                                    <p>Enterprise Product Information Management.</p>
+                                    <ul class="feature-list">
+                                        <li>Structured & Unstructured Data</li>
+                                        <li>Product & Its Hierarchy Management</li>
+                                        <li>Pricing & Promotions</li>
+                                    </ul>
+                                    <div class="rt-example">
+                                        <strong>Real-Time Example:</strong> Categorizes items and maintains
+                                        inventory/pricing logic across channels.
+                                    </div>
+                                </div>
+
+                                <div class="card system-card">
+                                    <h5>Partum (Logistics Platform)</h5>
+                                    <p>Delivery scheduling & fleet orchestration.</p>
+                                    <ul class="feature-list">
+                                        <li>Capacity & Routing</li>
+                                        <li>Real-time Slot Reservation</li>
+                                    </ul>
+                                    <div class="rt-example">
+                                        <strong>Real-Time Example:</strong> Partum locks a delivery slot and truck
+                                        capacity during the checkout process.
+                                    </div>
+                                </div>
+
+                                <div class="card system-card">
+                                    <h5>Scout Platform</h5>
+                                    <p>Identity & Role-Based Access Control.</p>
+                                    <div class="rt-example">
+                                        <strong>Real-Time Example:</strong> Validates JWT tokens against Active
+                                        Directory for "Manager Overrides."
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flow-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+
+                        <div class="arch-layer border-blue">
+                            <span class="layer-title bg-blue">Store API & Microservices Layer</span>
+                            <div class="module-grid">
+                                <div class="card tech-box">
+                                    <h5>API Gateway</h5>
+                                    <p>Single secure entry point for UI and devices.</p>
+                                </div>
+                                <div class="card tech-box">
+                                    <h5>Node.js Microservices</h5>
+                                    <p>Item, Cart, Pricing, and Order orchestration.</p>
+                                    <div class="rt-example">Orchestrator queries Redis for cached pricing before totals.
+                                    </div>
+                                </div>
+                                <div class="card tech-box">
+                                    <h5>Redis Cache Layer</h5>
+                                    <p>In-memory caching for low-latency sessions.</p>
+                                </div>
+                                <div class="card tech-box">
+                                    <h5>Golang Microservices</h5>
+                                    <p>High-performance inventory availability & Delivery Scheduling logic.</p>
+                                </div>
+                                <div class="card tech-box">
+                                    <h5>RabbitMQ + Python</h5>
+                                    <p>Async processing and POS synchronization.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="arrow-down"><i class="fa-solid fa-arrow-down-up"></i></div>
-
-                    <div class="diagram-layer">
-                        <div class="layer-label">Data & Infrastructure</div>
-                        <div class="layer-content">
-                            <div class="arch-box cloud"><i class="fa-brands fa-aws"></i> AWS Cloud</div>
-                            <div class="arch-box cloud"><i class="fa-solid fa-database"></i> Legacy ERP Sync</div>
-                            <div class="arch-box cloud"><i class="fa-solid fa-truck"></i> 3PL Logistics</div>
+                    <div id="technical" class="tab-content">
+                        <div class="arch-intro">
+                            <h3>Technical Stack</h3>
+                            <p>A modern, modular stack built for reliability and speed.</p>
+                        </div>
+                        <div class="module-grid">
+                            <div class="card tech-stack-item">
+                                <i class="fa-brands fa-angular"></i>
+                                <h4>Frontend</h4>
+                                <p>Angulars</p>
+                            </div>
+                            <div class="card tech-stack-item">
+                                <i class="fa-brands fa-node-js"></i>
+                                <h4>Backend</h4>
+                                <p>Node.js & Golang</p>
+                            </div>
+                            <div class="card tech-stack-item">
+                                <i class="fa-solid fa-database"></i>
+                                <h4>Storage</h4>
+                                <p>MySQL, Redis, S3</p>
+                            </div>
+                            <div class="card tech-stack-item">
+                                <i class="fa-solid fa-truck-fast"></i>
+                                <h4>Async</h4>
+                                <p>RabbitMQ & Python</p>
+                            </div>
+                            <div class="card tech-stack-item">
+                                <i class="fa-solid fa-lock"></i>
+                                <h4>Security</h4>
+                                <p>CIAM & RBAC</p>
+                            </div>
+                            <div class="card tech-stack-item">
+                                <i class="fa-brands fa-aws"></i>
+                                <h4>Cloud</h4>
+                                <p>AWS Infrastructure</p>
+                            </div>
                         </div>
                     </div>
 
@@ -614,7 +812,7 @@
         </div>
     </section>
 
-    <section class="feature-section bg-offset">
+    <!-- <section class="feature-section bg-offset">
         <div class="container">
             <div class="arch-block">
                 <span class="section-badge">Scale</span>
@@ -627,7 +825,7 @@
 
             </div>
         </div>
-    </section>
+    </section> -->
 
     <footer class="footer">
         <div class="container">
@@ -661,7 +859,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Retail Calculus LLC. All rights reserved.</p>
+                <p>&copy; 2016-2026 Retail Calculus LLC. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -696,7 +894,53 @@
                 });
             });
         }
+
+        function openTab(tabId, el) {
+            document.querySelectorAll(".tab-content")
+                .forEach(t => t.classList.remove("active"));
+
+            document.querySelectorAll(".tab-button")
+                .forEach(b => b.classList.remove("active"));
+
+            document.getElementById(tabId).classList.add("active");
+        }
     </script>
+
+  <!-- Theme Toggle Option -->
+  <div class="theme-toggle-container">
+    <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme">
+      <span class="theme-toggle-thumb"></span>
+      <span class="theme-toggle-icon theme-toggle-sun"><i class="fa-solid fa-sun"></i></span>
+      <span class="theme-toggle-icon theme-toggle-moon"><i class="fa-solid fa-moon"></i></span>
+    </button>
+  </div>
+
+  <script>
+    // --- DARK/LIGHT THEME TOGGLE SCRIPT ---
+    (function() {
+      const toggleBtn = document.getElementById('themeToggle');
+      if (!toggleBtn) return;
+
+      function applyTheme(theme) {
+        if (theme === 'dark') {
+          document.body.classList.add('dark-theme');
+        } else {
+          document.body.classList.remove('dark-theme');
+        }
+        localStorage.setItem('theme', theme);
+      }
+
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+      applyTheme(initialTheme);
+
+      toggleBtn.addEventListener('click', () => {
+        const isDark = document.body.classList.contains('dark-theme');
+        applyTheme(isDark ? 'light' : 'dark');
+      });
+    })();
+  </script>
 </body>
 
 </html>

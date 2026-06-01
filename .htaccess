@@ -1,0 +1,31 @@
+# Retail Calculus Apache Server Configuration File (.htaccess)
+# Designed for maximum security, speed, and URL canonicalization.
+
+# 1. Turn on Rewrite Engine
+RewriteEngine On
+
+# 2. Redirect www to non-www (Canonical 301 Redirect)
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# 3. Add Modern Security Headers
+<IfModule mod_headers.c>
+    # Strict Transport Security (HSTS) - 2 years including subdomains and preload
+    Header set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+
+    # Clickjacking Protection
+    Header set X-Frame-Options "SAMEORIGIN"
+
+    # MIME-Type Sniffing Protection
+    Header set X-Content-Type-Options "nosniff"
+
+    # Cross-Site Scripting (XSS) Filter
+    Header set X-XSS-Protection "1; mode=block"
+
+    # Referrer Policy
+    Header set Referrer-Policy "no-referrer-when-downgrade"
+
+    # Content Security Policy (CSP)
+    # Allows self assets, Google Web Fonts, FontAwesome CDN, AOS styles, S3 images, YouTube embeds, and GA4 tracking
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https://images.unsplash.com https://rc-site-assets.s3.us-east-2.amazonaws.com https://retailcalculus.com; frame-src 'self' https://www.youtube.com;"
+</IfModule>

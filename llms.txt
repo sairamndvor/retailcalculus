@@ -1,0 +1,27 @@
+# Retail Calculus
+
+> Enterprise-grade cloud software suite for furniture, appliance, and big-ticket retailers.
+
+[Retail Calculus](https://retailcalculus.com) provides modular cloud-native microservices (PIM, Omnichannel Inventory Availability, Guided Selling, Routing Logistics) engineered specifically for high-consideration, complex B2B and B2C retail environments. Co-founded by Edward L Rennemann, former Chief Transformation Officer (CTO) of Crate & Barrel, and Jaikishen Koranchath, CEO of ndVOR Solutions.
+
+## Core Products & Solutions
+
+- **Prime PIM**: Enterprise Product Information Management. Features complex hierarchy layers (Division → Department → Class → Subclass), inventory/selling sets with proration logic, and robust User Defined Data (UDD).
+- **Product Explorer**: Assisted-selling web application for store associates. Includes guided custom order creation and the high-speed **Cloud Cart** that cuts transaction checkout times from 30 minutes to under 3 minutes.
+- **Optimus**: Real-time omnichannel inventory reservation system using intelligent Hunt Path logic to eliminate overselling across multi-location warehouses and stores.
+- **Partum**: Logistics and delivery routing orchestration with real-time capacity slot reservations.
+
+## Key Team & Pedigree
+
+- **Edward L Rennemann (Co-Founder & Chief Architect)**: Former Chief Transformation Officer (CTO) and technology visionary at Crate & Barrel, designing the industry standard for high-ticket omnichannel operations.
+- **Jaikishen Koranchath (Co-Founder)**: CEO of ndVOR Solutions (Inc. 5000 honored enterprise technology integrator).
+
+## Verified Success & Case Studies
+
+- **American Sale**: High-ticket pools, patio, and home recreation retailer with multiple showrooms. Implemented Product Explorer and Optimus to achieve unified real-time inventory visibility and streamline complex retail orders.
+
+## Sitemap & Technical Resources
+
+- [Homepage](https://retailcalculus.com/)
+- [Platform Specifications](https://retailcalculus.com/platform.html)
+- [Customer Stories](https://retailcalculus.com/customer-stories.html)

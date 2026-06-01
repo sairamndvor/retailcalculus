@@ -159,19 +159,6 @@
 
 <body>
 
-  <div class="top-bar">
-    <div class="top-bar-container">
-      <div class="top-bar-left">
-      </div>
-      <div class="top-bar-right">
-        <!-- <a href="#support"><i class="fa-regular fa-comment-dots"></i> Customer Support</a> -->
-        <a href="#sales"><i class="fa-regular fa-user"></i> Contact Sales</a>
-        <a href="https://americansale.retailcalculus.com/retailcalculus/#/login" class="login-link" target="_blank">Log
-          in</a>
-      </div>
-    </div>
-  </div>
-
   <nav class="navbar">
     <div class="nav-container">
       <a class="navbar-brand" href="index.html" aria-label="Retail Calculus Home">
@@ -182,10 +169,21 @@
 
       <div class="nav-links">
         <a href="#mission">Mission</a>
-        <a href="platform.html">Platform</a>
+        <div class="nav-dropdown">
+          <a href="platform.html" class="dropdown-trigger">Platform <i class="fa-solid fa-chevron-down caret-icon"></i></a>
+          <div class="dropdown-menu">
+            <a href="platform.html#primepim"><i class="fa-solid fa-database"></i> Prime PIM</a>
+            <a href="platform.html#productexplorer"><i class="fa-solid fa-desktop"></i> Product Explorer</a>
+            <a href="platform.html#optimus"><i class="fa-solid fa-boxes-stacked"></i> Optimus Inventory</a>
+          </div>
+        </div>
         <a href="#team">About Us</a>
         <a href="customer-stories.html">Stories</a>
-        <a href="#contact" class="nav-cta">Schedule Demo</a>
+      </div>
+
+      <div class="nav-actions">
+        <a href="http://localhost:4200" class="btn-login" target="_blank">Log in</a>
+        <a href="#contact" class="btn-demo">Schedule Demo</a>
       </div>
 
       <button class="mobile-menu-btn" aria-label="Toggle menu">
@@ -390,7 +388,8 @@
           <div class="spotlight-quote-author">
             <div>
               <div style="font-weight: 700; color: #8A6623; font-size: 1.1rem;">American Sale Operations</div>
-              <div style="color: #475569; font-size: 0.9rem; margin-top: 4px;">Multi-Location Patio & Pool Retailer</div>
+              <div style="color: #475569; font-size: 0.9rem; margin-top: 4px;">Multi-Location Patio & Pool Retailer
+              </div>
             </div>
           </div>
         </div>

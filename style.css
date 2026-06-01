@@ -192,9 +192,13 @@ body {
   color: var(--primary) !important;
 }
 
+.top-bar {
+  display: none !important; /* Integrated cleanly into the main navbar for premium look */
+}
+
 .navbar {
   position: fixed;
-  top: 40px;
+  top: 0; /* Positioned at the very top */
   width: 100%;
   z-index: 1000;
   background: rgba(255, 255, 255, 0.95);
@@ -237,6 +241,7 @@ body {
   gap: 32px;
   align-items: center;
   margin-left: auto;
+  margin-right: 40px; /* Shift links to center/left of actions */
 }
 
 .nav-links a {
@@ -251,15 +256,122 @@ body {
   color: var(--primary);
 }
 
-.nav-cta {
-  background: var(--dark);
-  color: white !important;
-  padding: 10px 20px;
-  border-radius: 6px;
+/* --- PREMIUM ZINTLR STYLE DROPDOWNS & BUTTONS --- */
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-.nav-cta:hover {
+.nav-dropdown .dropdown-trigger {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.caret-icon {
+  font-size: 0.7rem;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--gray);
+}
+
+.nav-dropdown:hover .caret-icon {
+  transform: rotate(180deg);
+  color: var(--primary);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: white;
+  min-width: 240px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(4px);
+}
+
+.dropdown-menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: var(--dark) !important;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  margin-right: 0 !important;
+}
+
+.dropdown-menu a:hover {
+  background: #f8fafc;
+  color: var(--primary) !important;
+}
+
+.dropdown-menu a i {
+  color: var(--primary);
+  font-size: 0.95rem;
+  width: 16px;
+  text-align: center;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-login {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 10px 24px;
+  border: 1px solid #cbd5e1;
+  border-radius: 50px; /* Premium rounded pillow shape */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: transparent;
+}
+
+.btn-login:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: rgba(197, 160, 89, 0.05);
+}
+
+.btn-demo {
+  text-decoration: none;
+  color: white !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 10px 24px;
+  background: var(--dark);
+  border-radius: 50px; /* Premium rounded pillow shape */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.btn-demo:hover {
   background: var(--primary);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(197, 160, 89, 0.3);
 }
 
 /* Mobile Menu */
@@ -280,7 +392,7 @@ body {
 
 .mobile-menu-overlay {
   position: fixed;
-  top: 120px;
+  top: 80px;
   left: 0;
   width: 100%;
   height: 0;

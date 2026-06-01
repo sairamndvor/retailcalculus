@@ -468,18 +468,6 @@
 
 <body>
 
-    <div class="top-bar">
-        <div class="top-bar-container">
-            <div class="top-bar-left">
-            </div>
-            <div class="top-bar-right">
-                <!-- <a href="#support"><i class="fa-regular fa-comment-dots"></i> Customer Support</a> -->
-                <a href="#sales"><i class="fa-regular fa-user"></i> Contact Sales</a>
-                <a href="http://localhost:4200/login" class="login-link" target="_blank">Log in</a>
-            </div>
-        </div>
-    </div>
-
     <nav class="navbar">
         <div class="nav-container">
             <a class="navbar-brand" href="index.html" aria-label="Retail Calculus Home">
@@ -490,10 +478,21 @@
 
             <div class="nav-links">
                 <a href="index.html#mission">Mission</a>
-                <a href="platform.html" style="color:var(--primary);">Platform</a>
+                <div class="nav-dropdown">
+                    <a href="platform.html" class="dropdown-trigger" style="color:var(--primary);">Platform <i class="fa-solid fa-chevron-down caret-icon" style="color:var(--primary);"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="platform.html#primepim"><i class="fa-solid fa-database"></i> Prime PIM</a>
+                        <a href="platform.html#productexplorer"><i class="fa-solid fa-desktop"></i> Product Explorer</a>
+                        <a href="platform.html#optimus"><i class="fa-solid fa-boxes-stacked"></i> Optimus Inventory</a>
+                    </div>
+                </div>
                 <a href="index.html#team">About Us</a>
                 <a href="customer-stories.html">Stories</a>
-                <a href="#contact" class="nav-cta">Schedule Demo</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="http://localhost:4200/login" class="btn-login" target="_blank">Log in</a>
+                <a href="#contact" class="btn-demo">Schedule Demo</a>
             </div>
 
             <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle menu">

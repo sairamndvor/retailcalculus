@@ -1934,13 +1934,13 @@ body.dark-theme .home-stories h2 {
 
 /* --- HIGH-CONTRAST BUTTON OVERRIDES FOR DARK MODE --- */
 
-body.dark-theme .nav-cta {
+body.dark-theme .btn-demo {
   background: var(--gradient-gold) !important;
   color: white !important;
   box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3) !important;
 }
 
-body.dark-theme .nav-cta:hover {
+body.dark-theme .btn-demo:hover {
   background: var(--primary-hover) !important;
   box-shadow: 0 6px 20px rgba(197, 160, 89, 0.4) !important;
 }

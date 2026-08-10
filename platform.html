@@ -362,7 +362,8 @@
             background: #000;
         }
 
-        .video-wrapper iframe {
+        .video-wrapper iframe,
+        .video-wrapper video {
             position: absolute;
             top: 0;
             left: 0;
@@ -479,7 +480,8 @@
             <div class="nav-links">
                 <a href="index.html#mission">Mission</a>
                 <div class="nav-dropdown">
-                    <a href="platform.html" class="dropdown-trigger" style="color:var(--primary);">Platform <i class="fa-solid fa-chevron-down caret-icon" style="color:var(--primary);"></i></a>
+                    <a href="platform.html" class="dropdown-trigger" style="color:var(--primary);">Platform <i
+                            class="fa-solid fa-chevron-down caret-icon" style="color:var(--primary);"></i></a>
                     <div class="dropdown-menu">
                         <a href="platform.html#primepim"><i class="fa-solid fa-database"></i> Prime PIM</a>
                         <a href="platform.html#productexplorer"><i class="fa-solid fa-desktop"></i> Product Explorer</a>
@@ -539,8 +541,8 @@
                 </div>
                 <div class="feature-visual" data-aos="fade-left">
                     <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/LXb3EKWsInQ?si=Rel=0" title="Prime PIM Demo"
-                            allowfullscreen></iframe>
+                        <video src="https://rc-site-assets.s3.us-east-2.amazonaws.com/video/Prime.mp4" controls autoplay
+                            muted loop playsinline></video>
                     </div>
                 </div>
             </div>
@@ -564,8 +566,8 @@
                 </div>
                 <div class="feature-visual" data-aos="fade-right">
                     <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/5qap5aO4i9A?si=Rel=0" title="Product Explorer Demo"
-                            allowfullscreen></iframe>
+                        <video src="https://rc-site-assets.s3.us-east-2.amazonaws.com/video/PE.mp4" controls autoplay
+                            muted loop playsinline></video>
                     </div>
                 </div>
             </div>
@@ -586,12 +588,12 @@
                         <li>Real-time sync across web and store channels</li>
                     </ul>
                 </div>
-                <div class="feature-visual" data-aos="fade-left">
+                <!-- <div class="feature-visual" data-aos="fade-left">
                     <div class="video-wrapper">
                         <iframe src="https://www.youtube.com/embed/tFq6Q_muwG0?si=Rel=0" title="Optimus Demo"
                             allowfullscreen></iframe>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>

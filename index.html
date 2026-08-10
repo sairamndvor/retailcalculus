@@ -170,7 +170,8 @@
       <div class="nav-links">
         <a href="#mission">Mission</a>
         <div class="nav-dropdown">
-          <a href="platform.html" class="dropdown-trigger">Platform <i class="fa-solid fa-chevron-down caret-icon"></i></a>
+          <a href="platform.html" class="dropdown-trigger">Platform <i
+              class="fa-solid fa-chevron-down caret-icon"></i></a>
           <div class="dropdown-menu">
             <a href="platform.html#primepim"><i class="fa-solid fa-database"></i> Prime PIM</a>
             <a href="platform.html#productexplorer"><i class="fa-solid fa-desktop"></i> Product Explorer</a>
@@ -183,7 +184,9 @@
       </div>
 
       <div class="nav-actions">
-        <a href="http://localhost:4200" class="btn-login" target="_blank">Log in</a>
+        <a href="https://development.platform.retailcalculus.com/retailcalculus/#/login" class="btn-login"
+          target="_blank">Log
+          in</a>
         <a href="book-demo.html" class="btn-demo">Schedule Demo</a>
       </div>
 
@@ -682,30 +685,30 @@
   </div>
 
   <script>
-    // --- DARK/LIGHT THEME TOGGLE SCRIPT ---
-    (function () {
-      const toggleBtn = document.getElementById('themeToggle');
-      if (!toggleBtn) return;
+      // --- DARK/LIGHT THEME TOGGLE SCRIPT ---
+      (function () {
+        const toggleBtn = document.getElementById('themeToggle');
+        if (!toggleBtn) return;
 
-      function applyTheme(theme) {
-        if (theme === 'dark') {
-          document.body.classList.add('dark-theme');
-        } else {
-          document.body.classList.remove('dark-theme');
+        function applyTheme(theme) {
+          if (theme === 'dark') {
+            document.body.classList.add('dark-theme');
+          } else {
+            document.body.classList.remove('dark-theme');
+          }
+          localStorage.setItem('theme', theme);
         }
-        localStorage.setItem('theme', theme);
-      }
 
-      const savedTheme = localStorage.getItem('theme');
-      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
-      applyTheme(initialTheme);
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+        applyTheme(initialTheme);
 
-      toggleBtn.addEventListener('click', () => {
-        const isDark = document.body.classList.contains('dark-theme');
-        applyTheme(isDark ? 'light' : 'dark');
-      });
-    })();
+        toggleBtn.addEventListener('click', () => {
+          const isDark = document.body.classList.contains('dark-theme');
+          applyTheme(isDark ? 'light' : 'dark');
+        });
+      })();
   </script>
 </body>
 
